@@ -175,6 +175,8 @@ inductive BinOp : Type
 | or
 | imp
 | iff
+| nand
+| nor
 deriving Repr
 
 /- @@@
@@ -242,6 +244,8 @@ notation:max "{" v "}" => (var_expr v)
 notation:max "¬" p:40 => un_op_expr UnOp.not p
 infixr:35 " ∧ "  =>  Expr.bin_op_expr BinOp.and
 infixr:30 " ∨  "  => Expr.bin_op_expr BinOp.or
+infixr:32 " ↑ " => bin_op_expr BinOp.nand
+infixr:27 " ↓ " => bin_op_expr BinOp.nor
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
 
