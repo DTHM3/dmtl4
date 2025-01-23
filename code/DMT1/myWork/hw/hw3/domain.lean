@@ -104,6 +104,6 @@ def nand : Bool → Bool → Bool
 -- Answer #1: There are 6 boolean functions (two of them are defined through Bool rather than in this domain namespace)
 
 -- Problem #2 (Boolean algebra): Write a specification of the exclusive or function (xor)
--- Answer #2:
+-- Answer #2: F(x, y) ⇔ (x ∨ y) ∧ ¬(x ∧ y), where F(x,y) is x xor y
 
 end DMT1.myWork.hw.hw3.domain
