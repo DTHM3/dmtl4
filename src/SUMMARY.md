@@ -33,3 +33,4 @@
 ---
 
 [Learning Resources](./resources.md)
+[Getting Started](./build.md)
