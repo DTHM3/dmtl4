@@ -1,4 +1,4 @@
-namespace DMT1.hw.hw3.domain
+namespace DMT1.myWork.hw.hw3.domain
 
 /-!
 # Semantic Domain: Boolean Algebra
@@ -92,8 +92,22 @@ def iff : Bool → Bool → Bool
 | _, _ => false
 
 -- Define your own here.
+def nor : Bool → Bool → Bool
+| true, true => false
+| true, false => false
+| false, true => false
+| false, false => true
+
+def nand : Bool → Bool → Bool
+| true, true => false
+| true, false => true
+| false, true => true
+| false, false => true
 
 -- Problem #1 (combinatorics): How many binary Boolean functions are there?
--- Problem #2 (Boolean algenra): Write a specification of the exclusive or function (xor)
+-- Answer #1: There are 6 boolean functions (two of them are defined through Bool rather than in this domain namespace)
 
-end DMT1.hw.hw3.domain
+-- Problem #2 (Boolean algebra): Write a specification of the exclusive or function (xor)
+-- Answer #2:
+
+end DMT1.myWork.hw.hw3.domain

@@ -2,10 +2,10 @@
 # Interpretations
 @@@ -/
 
-import DMT1.hw.hw3.utilities
-import DMT1.hw.hw3.semantics
+import DMT1.myWork.hw.hw3.utilities
+import DMT1.myWork.hw.hw3.semantics
 
-namespace DMT1.hw.hw3.semantics
+namespace DMT1.myWork.hw.hw3.semantics
 open hw3.syntax
 open utilities
 
@@ -364,4 +364,4 @@ As a final note, if you improve this module's
 implementation, please send me a pull request!
 @@@ -/
 
-end DMT1.hw.hw3.semantics
+end DMT1.myWork.hw.hw3.semantics

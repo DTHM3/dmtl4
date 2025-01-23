@@ -4,7 +4,7 @@
 This chapter presents our formal definition of the
 syntax propositional logic.
 @@@ -/
-namespace DMT1.hw.hw3.syntax
+namespace DMT1.myWork.hw.hw3.syntax
 
 
 
@@ -259,4 +259,4 @@ interpretations of these variables as unvaryingly either
 true or false.
 @@@ -/
 
-end DMT1.hw.hw3.syntax
+end DMT1.myWork.hw.hw3.syntax

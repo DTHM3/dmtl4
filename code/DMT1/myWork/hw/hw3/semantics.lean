@@ -30,10 +30,10 @@ Boolean function that is the designated meaning of *op*.
 That's it!
 @@@ -/
 
-import DMT1.hw.hw3.syntax
-import DMT1.hw.hw3.domain
+import DMT1.myWork.hw.hw3.syntax
+import DMT1.myWork.hw.hw3.domain
 
-namespace DMT1.hw.hw3.semantics
+namespace DMT1.myWork.hw.hw3.semantics
 open hw3.syntax
 
 
@@ -64,6 +64,8 @@ def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.or => Bool.or
 | BinOp.imp => domain.imp   -- DMT1.lecture.propLogic.semantics.domain.imp
 | BinOp.iff => domain.iff  -- likewise
+| BinOp.nand => domain.nand
+| BinOp.nor => domain.nor
 
 /- @@@
 We've now understood that an "interpretation" can be understood
@@ -118,4 +120,4 @@ a justifiably confident grasp of essentially every aspect
 of the syntax and semantics of propositional logic.
 @@@ -/
 
-end DMT1.hw.hw3.semantics
+end DMT1.myWork.hw.hw3.semantics
