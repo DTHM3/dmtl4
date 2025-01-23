@@ -93,16 +93,12 @@ def iff : Bool → Bool → Bool
 
 -- Define your own here.
 def nor : Bool → Bool → Bool
-| true, true => false
-| true, false => false
-| false, true => false
 | false, false => true
+| _, _ => false
 
 def nand : Bool → Bool → Bool
 | true, true => false
-| true, false => true
-| false, true => true
-| false, false => true
+| _, _ => true
 
 -- Problem #1 (combinatorics): How many binary Boolean functions are there?
 -- Answer #1: There are 6 boolean functions (two of them are defined through Bool rather than in this domain namespace)
