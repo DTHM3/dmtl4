@@ -59,6 +59,19 @@ def evalUnOp : UnOp → (Bool → Bool)
 - (Bool → Bool → Bool) is the type of function that takes two Bools and returns one
 @@@ -/
 
+/-
+domain.lean:
+
+def nor : Bool → Bool → Bool
+| false, false => true
+| _, _ => false
+
+def nand : Bool → Bool → Bool
+| true, true => false
+| _, _ => true
+
+-/
+
 def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.and => Bool.and
 | BinOp.or => Bool.or
@@ -66,6 +79,21 @@ def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.iff => domain.iff  -- likewise
 | BinOp.nand => domain.nand
 | BinOp.nor => domain.nor
+
+/-
+One example from test.lean:
+
+def i4 : Interp
+| ⟨0⟩ => true
+| ⟨1⟩ => true
+| _ => false
+
+nand
+#eval ⟦e1⟧ i4 => false
+
+nor
+#eval ⟦e2⟧ i4 => false
+-/
 
 /- @@@
 We've now understood that an "interpretation" can be understood

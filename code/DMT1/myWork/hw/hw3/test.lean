@@ -33,6 +33,8 @@ already defined concrete notation.
 @@@ -/
 
 def e0 : Expr := X ∧ ¬Y ∨ Z
+def e1: Expr := X ↑ Y
+def e2: Expr := X ↓ Y
 
 /-!
 Now here are two interpretations, represented as
@@ -61,6 +63,16 @@ def i2 : Interp
 | ⟨2⟩ => false
 | _ => false
 
+def i3 : Interp
+| ⟨0⟩ => false
+| ⟨1⟩ => true
+| _ => false
+
+def i4 : Interp
+| ⟨0⟩ => true
+| ⟨1⟩ => true
+| _ => false
+
 /- @@@
 With these interpretations in hand, we can now
 apply ⟦e0⟧ to each of them to see which, if either,
@@ -70,3 +82,5 @@ then check!
 
 #eval ⟦e0⟧ i1
 #eval ⟦e0⟧ i2
+#eval ⟦e1⟧ i4
+#eval ⟦e2⟧ i4

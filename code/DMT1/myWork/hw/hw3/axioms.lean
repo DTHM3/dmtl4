@@ -11,9 +11,11 @@ able to use them here without prefixes.
 @@@ -/
 
 import DMT1.myWork.hw.hw3.syntax
+import DMT1.myWork.hw.hw3.semantics
 
 namespace DMT1.myWork.hw.hw3.axioms
 open hw3.syntax
+open hw3.semantics
 open Expr
 
 
