@@ -2,6 +2,9 @@
 
 This chapter presents our formal definition of the
 syntax propositional logic.
+
+<!-- toc -->
+
 ```lean
 namespace DMT1.lecture.propLogic.syntax
 ```

@@ -1,11 +1,11 @@
 # File for Test Cases
 
 ```lean
-import DMT1.hw.hw3.syntax
-import DMT1.hw.hw3.semantics
+import DMT1.MyWork.hw3.syntax
+import DMT1.MyWork.hw3.semantics
 
-open DMT1.hw.hw3.syntax
-open DMT1.hw.hw3.semantics
+open DMT1.MyWork.hw3.syntax
+open DMT1.MyWork.hw3.semantics
 ```
 
 In this file you will write test cases annotated

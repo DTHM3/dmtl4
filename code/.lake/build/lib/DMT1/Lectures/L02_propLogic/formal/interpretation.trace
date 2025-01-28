@@ -1,65 +1,65 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH= /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/interpretation.olean -i ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/interpretation.ilean -c ././.lake/build/ir/DMT1/Lectures/L02_propLogic/formal/interpretation.c --json",
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Cli/.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/bin/lean ././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/interpretation.olean -i ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/interpretation.ilean -c ././.lake/build/ir/DMT1/Lectures/L02_propLogic/formal/interpretation.c --json",
    "level": "trace"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:28:41: unused variable `v`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:31:41: unused variable `v`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
-  {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:47:0: false",
-   "level": "info"},
-  {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:48:0: true",
-   "level": "info"},
-  {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:49:0: true",
-   "level": "info"},
   {"message":
    "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:50:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:57:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:51:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:58:0: false",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:52:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:59:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:53:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:60:0: false",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:60:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:79:0: false",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:61:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:80:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:62:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:81:0: false",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:63:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:82:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:82:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:167:0: false",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:83:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:169:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:84:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:213:0: true",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:85:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:275:0: [false, false, false]",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:170:0: false",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:296:0: [[true, true, true], [true, true, false], [true, false, true], [true, false, false], [false, true, true],\n  [false, true, false], [false, false, true], [false, false, false]]",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:172:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:309:0: [[true, true, true, false, false], [true, true, false, false, false], [true, false, true, false, false],\n  [true, false, false, false, false], [false, true, true, false, false], [false, true, false, false, false],\n  [false, false, true, false, false], [false, false, false, false, false]]",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:216:0: true",
    "level": "info"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:358:0: [[true, true, true], [true, true, false], [true, false, true], [true, false, false], [false, true, true],\n  [false, true, false], [false, false, true], [false, false, false]]",
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:278:0: [false, false, false]",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:299:0: [[true, true, true], [true, true, false], [true, false, true], [true, false, false], [false, true, true],\n  [false, true, false], [false, false, true], [false, false, false]]",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:312:0: [[true, true, true, false, false], [true, true, false, false, false], [true, false, true, false, false],\n  [true, false, false, false, false], [false, true, true, false, false], [false, true, false, false, false],\n  [false, false, true, false, false], [false, false, false, false, false]]",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L02_propLogic/formal/interpretation.lean:361:0: [[true, true, true], [true, true, false], [true, false, true], [true, false, false], [false, true, true],\n  [false, true, false], [false, false, true], [false, false, false]]",
    "level": "info"}],
- "depHash": "14120580752193173056"}
+ "depHash": "3074609037345526974"}

@@ -29,11 +29,11 @@ Boolean function that is the designated meaning of *op*.
 That's it!
 
 ```lean
-import DMT1.hw.hw3.syntax
-import DMT1.hw.hw3.domain
+import DMT1.MyWork.hw3.syntax
+import DMT1.MyWork.hw3.domain
 
-namespace DMT1.hw.hw3.semantics
-open hw3.syntax
+namespace DMT1.MyWork.hw3.semantics
+open DMT1.MyWork.hw3.syntax
 ```
 
 
@@ -117,5 +117,5 @@ a justifiably confident grasp of essentially every aspect
 of the syntax and semantics of propositional logic.
 
 ```lean
-end DMT1.hw.hw3.semantics
+end DMT1.MyWork.hw3.semantics
 ```

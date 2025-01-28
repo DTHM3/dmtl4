@@ -1,5 +1,7 @@
 # Interpretations
 
+<!-- toc -->
+
 ```lean
 import DMT1.Lectures.L02_propLogic.formal.utilities
 import DMT1.Lectures.L02_propLogic.formal.semantics
@@ -8,9 +10,10 @@ namespace DMT1.lecture.propLogic.semantics
 open propLogic.syntax
 ```
 
-We represent an interpretation, *i*, in Lean, a value of type
-Interp (Var → Bool) as a total function from any variable (Var),
-*v*, to the Boolean value that i assigns to it.
+An interpretation, *i*, in predicate logic is a function
+from variables to Booleans;. That is just how we represent
+on in Lean: as a value of type Interp, an abbreviation for
+the type of total functions from Var to Bool, *Var → Bool*.
 
 Recall that in our specification, a variable expression is
 constructed from a variable. All variable expressions built

@@ -1,5 +1,7 @@
 /- @@@
 # Counterexamples
+
+<!-- toc -->
 @@@ -/
 
 import DMT1.Lectures.L03_modelTheory.models
@@ -8,6 +10,8 @@ namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 
 /- @@@
+
+## Final All Counterexamples
 A counterexample is an interpretation that makes a proposition
 false. If you write a *specification*, S, about a system in the
 form of a proposition that should be true of all possible system
@@ -18,6 +22,12 @@ together a method for finding a counterexample if there is one?
 @@@ -/
 
 def findCounterexamples (e : Expr) : List Interp := findModels ¬e
+
+
+/- @@@
+## Find One Counterexample
+@@@ -/
+
 def findCounterexample (e : Expr) : Option Interp := findModel ¬e
 
 /- @@@

@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: DMT1
-// Imports: Init DMT1.Lectures.L02_propLogic.formal.syntax DMT1.Lectures.L02_propLogic.formal.semantics DMT1.Lectures.L02_propLogic.formal.interpretation DMT1.Lectures.L02_propLogic.formal.domain DMT1.Lectures.L02_propLogic.formal.axioms DMT1.Lectures.L02_propLogic.formal.identities DMT1.Lectures.L02_propLogic.formal.utilities DMT1.hw.hw3.syntax DMT1.hw.hw3.domain DMT1.hw.hw3.semantics DMT1.hw.hw3.axioms DMT1.hw.hw3.interpretation DMT1.hw.hw3.utilities DMT1.Lectures.L03_modelTheory.models DMT1.Lectures.L03_modelTheory.counterexamples DMT1.Lectures.L03_modelTheory.truthTable DMT1.Lectures.L03_modelTheory.properties DMT1.Lectures.L03_modelTheory.validity
+// Imports: Init DMT1.Lectures.L02_propLogic.formal.syntax DMT1.Lectures.L02_propLogic.formal.semantics DMT1.Lectures.L02_propLogic.formal.interpretation DMT1.Lectures.L02_propLogic.formal.domain DMT1.Lectures.L02_propLogic.formal.axioms DMT1.Lectures.L02_propLogic.formal.identities DMT1.Lectures.L02_propLogic.formal.utilities DMT1.MyWork.hw3.syntax DMT1.MyWork.hw3.domain DMT1.MyWork.hw3.semantics DMT1.MyWork.hw3.axioms DMT1.MyWork.hw3.interpretation DMT1.MyWork.hw3.utilities DMT1.Lectures.L03_modelTheory.models DMT1.Lectures.L03_modelTheory.counterexamples DMT1.Lectures.L03_modelTheory.truthTable DMT1.Lectures.L03_modelTheory.properties DMT1.Lectures.L03_modelTheory.validity
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -21,12 +21,12 @@ lean_object* initialize_DMT1_Lectures_L02__propLogic_formal_domain(uint8_t built
 lean_object* initialize_DMT1_Lectures_L02__propLogic_formal_axioms(uint8_t builtin, lean_object*);
 lean_object* initialize_DMT1_Lectures_L02__propLogic_formal_identities(uint8_t builtin, lean_object*);
 lean_object* initialize_DMT1_Lectures_L02__propLogic_formal_utilities(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_syntax(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_domain(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_semantics(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_axioms(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_interpretation(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_hw_hw3_utilities(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_syntax(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_domain(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_semantics(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_axioms(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_interpretation(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_MyWork_hw3_utilities(uint8_t builtin, lean_object*);
 lean_object* initialize_DMT1_Lectures_L03__modelTheory_models(uint8_t builtin, lean_object*);
 lean_object* initialize_DMT1_Lectures_L03__modelTheory_counterexamples(uint8_t builtin, lean_object*);
 lean_object* initialize_DMT1_Lectures_L03__modelTheory_truthTable(uint8_t builtin, lean_object*);
@@ -61,22 +61,22 @@ lean_dec_ref(res);
 res = initialize_DMT1_Lectures_L02__propLogic_formal_utilities(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_syntax(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_syntax(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_domain(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_domain(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_semantics(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_semantics(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_axioms(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_axioms(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_interpretation(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_interpretation(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_hw_hw3_utilities(builtin, lean_io_mk_world());
+res = initialize_DMT1_MyWork_hw3_utilities(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_DMT1_Lectures_L03__modelTheory_models(builtin, lean_io_mk_world());

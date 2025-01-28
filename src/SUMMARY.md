@@ -4,7 +4,7 @@
 [Preface](./introduction.md)
 
 ---
-
+****
 - [Languages](./languages.md)
   
 - [Propositional Logic](./propLogic.md)
@@ -18,17 +18,18 @@
 - [Model Theory](./modelTheory.md)
   - [Models](./DMT1/Lectures/L03_modelTheory/models.lean.md)
   - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truthTable.lean.md)
-  - [Counterexamples](./DMT1/Lectures/L03_modelTheory/counterexamples.lean.md)
+  - [**Counterexamples**](./DMT1/Lectures/L03_modelTheory/counterexamples.lean.md)
   - [Properties of Expressions](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
   - [Semantic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
   
----
+- [Arithmetic](./Arithmetic.md)
+  - [Syntax and Semantics](./DMT1/Lectures/L04_nat_arithmetic/arithLang.lean.md)
 
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)
-  - [Abstract and Concrete Syntax](./Assignments/a2.md)
-  - [Operational Semantics](./Assignments/a3.md)
+  - [Extend Syntax for Propositional Logic](./Assignments/a2.md)
+  - [Extend Semantics for Propositional Logic](./Assignments/a3.md)
 
 ---
 

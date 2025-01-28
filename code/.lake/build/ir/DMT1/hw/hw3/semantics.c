@@ -1,6 +1,6 @@
 // Lean compiler output
-// Module: DMT1.hw.hw3.semantics
-// Imports: Init DMT1.hw.hw3.syntax DMT1.hw.hw3.domain
+// Module: DMT1.MyWork.hw3.semantics
+// Imports: Init DMT1.MyWork.hw3.syntax DMT1.MyWork.hw3.domain
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"

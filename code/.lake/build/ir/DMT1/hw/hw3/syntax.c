@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.hw.hw3.syntax
+// Module: DMT1.MyWork.hw3.syntax
 // Imports: Init
 #include <lean/lean.h>
 #if defined(__clang__)
@@ -571,7 +571,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.UnOp.not", 27, 27);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.UnOp.not", 27, 27);
 return x_1;
 }
 }
@@ -812,7 +812,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.BinOp.and", 28, 28);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.BinOp.and", 28, 28);
 return x_1;
 }
 }
@@ -878,7 +878,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.BinOp.or", 27, 27);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.BinOp.or", 27, 27);
 return x_1;
 }
 }
@@ -944,7 +944,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.BinOp.imp", 28, 28);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.BinOp.imp", 28, 28);
 return x_1;
 }
 }
@@ -1010,7 +1010,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.BinOp.iff", 28, 28);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.BinOp.iff", 28, 28);
 return x_1;
 }
 }
@@ -1190,7 +1190,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.Expr.lit_expr", 32, 32);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.Expr.lit_expr", 32, 32);
 return x_1;
 }
 }
@@ -1376,7 +1376,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.Expr.var_expr", 32, 32);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.Expr.var_expr", 32, 32);
 return x_1;
 }
 }
@@ -1406,7 +1406,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.Expr.un_op_expr", 34, 34);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.Expr.un_op_expr", 34, 34);
 return x_1;
 }
 }
@@ -1469,7 +1469,7 @@ static lean_object* _init_l___private_DMT1_hw_hw3_syntax_0__DMT1_hw_hw3_syntax_r
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.hw.hw3.syntax.Expr.bin_op_expr", 35, 35);
+x_1 = lean_mk_string_unchecked("DMT1.MyWork.hw3.syntax.Expr.bin_op_expr", 35, 35);
 return x_1;
 }
 }

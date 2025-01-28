@@ -42,7 +42,7 @@ models, in which case the returned list will be empty.
 @@@ -/
 def findModels (e : Expr) : List Interp :=
   List.filter
-    (fun i => isModel i e)-- given i, true iff i is model of e
+    (fun i => ⟦e⟧i)-- given i, true iff i is model of e
     (interpsFromExpr e)
 
 /- @@@

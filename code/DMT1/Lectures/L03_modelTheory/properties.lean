@@ -1,6 +1,8 @@
 /- @@@
 # Properties of Propositions
 
+<!-- toc -->
+
 We built a satisfiability checker. The procedure it implements
 *decides* whether any propositional logic expression, e, has at
 least one interpretation, i, such that (i e) is true. It works
@@ -20,26 +22,25 @@ namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 
 /- @@@
-## Decision Procedures for Properties of PL Expressions
-@@@ -/
+## Satisfiability
 
-/- @@@
-INTERFACE
-@@@ -/
-
-/- @@@
 Satisfiability means there's *some* interpretation for which e is true
 @@@ -/
 def is_sat :    Expr → Bool :=
   λ e => reduce_or (truthTableOutputs e)
 
 /- @@@
+## Unsatisfiability
+@@@ -/
+def is_unsat : Expr → Bool :=
+  λ e => not (is_sat e)
+
+/- @@@
+## Validity
+
 Validity means that a proposition is true under all interpretations
 @@@ -/
 def is_valid :  Expr → Bool :=
   λ e => reduce_and (truthTableOutputs e)
-
-def is_unsat : Expr → Bool :=
-  λ e => not (is_sat e)
 
 end DMT1.lecture.propLogic.semantics.models

@@ -1,12 +1,14 @@
 # Interpretations
 
 ```lean
-import DMT1.hw.hw3.utilities
-import DMT1.hw.hw3.semantics
+import DMT1.MyWork.hw3.utilities
+import DMT1.MyWork.hw3.semantics
 
-namespace DMT1.hw.hw3.semantics
-open hw3.syntax
-open utilities
+namespace DMT1.MyWork.hw3.interpretation
+
+open DMT1.MyWork.hw3.syntax
+open DMT1.MyWork.hw3.semantics
+open DMT1.MyWork.hw3.utilities
 ```
 
 We represent an interpretation, *i*, in Lean, a value of type
@@ -363,5 +365,5 @@ As a final note, if you improve this module's
 implementation, please send me a pull request!
 
 ```lean
-end DMT1.hw.hw3.semantics
+end DMT1.MyWork.hw3.interpretation
 ```

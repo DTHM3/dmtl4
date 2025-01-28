@@ -1,3 +1,6 @@
+
+<!-- toc -->
+
 # Semantics
 
 The idea of semantics in Propositional Logic is simple:
@@ -38,7 +41,7 @@ open propLogic.syntax
 
 
 
-#### Fixed Interpretation of Unary Connectives
+## Fixed Interpretation of Unary Connectives
 
 The first thing we'll do is define what Boolean operators
 we mean by the names of our unary and binary "conenctives".
@@ -52,7 +55,7 @@ def evalUnOp : UnOp → (Bool → Bool)
 ```
 
 
-#### Fixed Interpretation of Binary Connectives
+## Fixed Interpretation of Binary Connectives
 
 - takes a binary operator and returns corresponding *binary* Boolean function
 - (Bool → Bool → Bool) is the type of function that takes two Bools and returns one
@@ -65,6 +68,7 @@ def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.iff => domain.iff  -- likewise
 ```
 
+## Interpretations: Variable Semantics of Variable Expressions
 We've now understood that an "interpretation" can be understood
 to be and can at least here actually be *used* as a function that
 takes a variable (var) as an argument and that returns the Boolean
@@ -81,7 +85,7 @@ abbrev Interp := Var → Bool
 open Expr
 ```
 
-#### Operational Semantics of Propositional Logic
+## Evaluation: Operational Semantics of Predicate Logic
 
 NB: This is the material you most need and want to grok.
 
@@ -102,6 +106,8 @@ def eval : Expr → Interp → Bool
 | (bin_op_expr op e1 e2), i => (evalBinOp op) (eval e1 i) (eval e2 i)
 ```
 
+
+## Standard Notation for Semantic Evaluation Operator
 
 The standard notation for (eval e i) is ⟦e⟧ᵢ, where ⟦⬝⟧
 is notation for the semantic evaluation function, eval.

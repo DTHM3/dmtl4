@@ -9,10 +9,11 @@ the specification of the syntax itself (Expr), so as to be
 able to use them here without prefixes.
 
 ```lean
-import DMT1.hw.hw3.syntax
+import DMT1.MyWork.hw3.syntax
 
-namespace DMT1.hw.hw3.axioms
-open hw3.syntax
+namespace DMT1.MyWork.hw3.axioms
+
+open DMT1.MyWork.hw3.syntax
 open Expr
 ```
 
@@ -81,5 +82,5 @@ as good examples of expressions we can write now using
 the syntax we've defined.
 
 ```lean
-end DMT1.hw.hw3.axioms
+end DMT1.MyWork.hw3.axioms
 ```

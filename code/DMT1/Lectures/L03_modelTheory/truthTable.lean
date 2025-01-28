@@ -22,7 +22,7 @@ each interpretation, *i*, in a given list of them.
 @@@ -/
 def mapEvalExprInterps : Expr → List Interp → List Bool
 | _, [] => []
-| e, h::t =>[⟦e⟧h] ++ mapEvalExprInterps e t
+| e, h::t => (⟦e⟧h)::mapEvalExprInterps e t
 
 /- @@@
 Return the list of Bool values obtaibed by evaluating

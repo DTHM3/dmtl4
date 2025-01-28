@@ -41,25 +41,6 @@ x_3 = lean_box(x_2);
 return x_3;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__valid(lean_object* x_1) {
-_start:
-{
-lean_object* x_2; uint8_t x_3; 
-x_2 = l_DMT1_lecture_propLogic_semantics_models_mapEvalExprAllInterps(x_1);
-x_3 = l_DMT1_lecture_propLogic_reduce__and(x_2);
-lean_dec(x_2);
-return x_3;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__valid___boxed(lean_object* x_1) {
-_start:
-{
-uint8_t x_2; lean_object* x_3; 
-x_2 = l_DMT1_lecture_propLogic_semantics_models_is__valid(x_1);
-x_3 = lean_box(x_2);
-return x_3;
-}
-}
 LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__unsat(lean_object* x_1) {
 _start:
 {
@@ -84,6 +65,25 @@ _start:
 {
 uint8_t x_2; lean_object* x_3; 
 x_2 = l_DMT1_lecture_propLogic_semantics_models_is__unsat(x_1);
+x_3 = lean_box(x_2);
+return x_3;
+}
+}
+LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__valid(lean_object* x_1) {
+_start:
+{
+lean_object* x_2; uint8_t x_3; 
+x_2 = l_DMT1_lecture_propLogic_semantics_models_mapEvalExprAllInterps(x_1);
+x_3 = l_DMT1_lecture_propLogic_reduce__and(x_2);
+lean_dec(x_2);
+return x_3;
+}
+}
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__valid___boxed(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; lean_object* x_3; 
+x_2 = l_DMT1_lecture_propLogic_semantics_models_is__valid(x_1);
 x_3 = lean_box(x_2);
 return x_3;
 }

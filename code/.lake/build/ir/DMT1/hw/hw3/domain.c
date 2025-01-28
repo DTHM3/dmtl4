@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.hw.hw3.domain
+// Module: DMT1.MyWork.hw3.domain
 // Imports: Init
 #include <lean/lean.h>
 #if defined(__clang__)

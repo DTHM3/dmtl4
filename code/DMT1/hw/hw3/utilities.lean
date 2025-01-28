@@ -2,7 +2,7 @@
 #### Low-level bit vector routines
 -/
 
-namespace DMT1.hw.hw3.utilities
+namespace DMT1.MyWork.hw3.utilities
 
 /-!
 Converting natural number indices to corresponding rows of
@@ -80,4 +80,4 @@ where foo : List Bool → Nat → Option Nat
           /-search rest-/
           foo bs len
 
-end DMT1.hw.hw3.utilities
+end DMT1.MyWork.hw3.utilities

@@ -1,8 +1,8 @@
 ```lean
-namespace DMT1.lecture.propLogic.semantics.domain
-
 /-!
 # Semantic Domain: Boolean Algebra
+
+<!-- toc -->
 
 The semantic domain in propositional logic is
 Boolean algebra. An algebra, such as Boolean algebra,
@@ -24,6 +24,7 @@ and then do a case analysis, returning one result if the
 constructor of the value was true, and andother if it was
 false.
 -/
+namespace DMT1.lecture.propLogic.semantics.domain
 
 #eval match false with | true => "T" | false => "F"
 #eval match true  with | true => "T" | false => "F"

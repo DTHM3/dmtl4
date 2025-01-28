@@ -1,5 +1,9 @@
 /- @@@
-# Examples of Expressions
+# Examples
+
+<!-- toc -->
+
+
 
 The material in this chapter depends on our specification
 of the syntax of propositional logic. We enclose these
@@ -19,7 +23,7 @@ open Expr
 
 /- @@@
 
-## Some Variable Expressions
+## Variable Expressions
 
 It'll suffice for our purposes to have three variable
 expressions. We'll call them P, Q, and R. The following
@@ -45,6 +49,9 @@ def R : Expr := {⟨2⟩}                 -- Our concrete: Expr.var_expr ...
 
 
 /- @@@
+
+## Operator Expressions
+
 Now that we have a few elementary expressions
 (we can call them propositions) we present a set
 of propositions that turn out to be important. For
