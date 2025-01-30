@@ -1,6 +1,6 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---stable\\bin\\lean.exe .\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\utilities.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\utilities.olean -i .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\utilities.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\myWork\\hw\\hw3\\utilities.c --json",
+   ".> LEAN_PATH=.\\.\\.lake/packages\\Cli\\.lake\\build\\lib;.\\.\\.lake/packages\\batteries\\.lake\\build\\lib;.\\.\\.lake/packages\\Qq\\.lake\\build\\lib;.\\.\\.lake/packages\\aesop\\.lake\\build\\lib;.\\.\\.lake/packages\\proofwidgets\\.lake\\build\\lib;.\\.\\.lake/packages\\importGraph\\.lake\\build\\lib;.\\.\\.lake/packages\\LeanSearchClient\\.lake\\build\\lib;.\\.\\.lake/packages\\plausible\\.lake\\build\\lib;.\\.\\.lake/packages\\mathlib\\.lake\\build\\lib;.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---v4.16.0-rc2\\bin\\lean.exe .\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\utilities.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\utilities.olean -i .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\utilities.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\myWork\\hw\\hw3\\utilities.c --json",
    "level": "trace"},
   {"message":
    ".\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\utilities.lean:26:4: declaration uses 'sorry'",
@@ -11,4 +11,4 @@
   {"message":
    ".\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\utilities.lean:26:4: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "321889999876088971"}
+ "depHash": "15737207763462522605"}

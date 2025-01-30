@@ -1,6 +1,6 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---stable\\bin\\lean.exe .\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\domain.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\domain.olean -i .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\domain.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\myWork\\hw\\hw3\\domain.c --json",
+   ".> LEAN_PATH=.\\.\\.lake/packages\\Cli\\.lake\\build\\lib;.\\.\\.lake/packages\\batteries\\.lake\\build\\lib;.\\.\\.lake/packages\\Qq\\.lake\\build\\lib;.\\.\\.lake/packages\\aesop\\.lake\\build\\lib;.\\.\\.lake/packages\\proofwidgets\\.lake\\build\\lib;.\\.\\.lake/packages\\importGraph\\.lake\\build\\lib;.\\.\\.lake/packages\\LeanSearchClient\\.lake\\build\\lib;.\\.\\.lake/packages\\plausible\\.lake\\build\\lib;.\\.\\.lake/packages\\mathlib\\.lake\\build\\lib;.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---v4.16.0-rc2\\bin\\lean.exe .\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\domain.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\domain.olean -i .\\.\\.lake\\build\\lib\\DMT1\\myWork\\hw\\hw3\\domain.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\myWork\\hw\\hw3\\domain.c --json",
    "level": "trace"},
   {"message": ".\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\domain.lean:27:0: \"F\"",
    "level": "info"},
@@ -10,4 +10,4 @@
    "level": "info"},
   {"message": ".\\.\\.\\.\\DMT1\\myWork\\hw\\hw3\\domain.lean:42:0: \"F\"",
    "level": "info"}],
- "depHash": "16320725007539730099"}
+ "depHash": "17189928341690260544"}

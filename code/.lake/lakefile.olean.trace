@@ -1,9 +1,4 @@
 {"platform": "x86_64-w64-windows-gnu",
  "options": {},
-<<<<<<< HEAD
- "leanHash": "11651562caae0a0b3973811508db2ab8903d3854",
- "configHash": "17723158176591983336"}
-=======
  "leanHash": "128a1e6b0a82718382f9c39c79be44ff3284547c",
  "configHash": "4258889701604243426"}
->>>>>>> 8517b0dd548faba18691cdf9f413530709201fd7
