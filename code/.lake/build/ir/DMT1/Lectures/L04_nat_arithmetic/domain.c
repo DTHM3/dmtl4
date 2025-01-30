@@ -13,89 +13,63 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_fac___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc_x27(lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_isEven(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_mul(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_add(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_lt___boxed(lean_object*, lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_eq(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_mul___boxed(lean_object*, lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_poof(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id_x27___boxed(lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_ge(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_three;
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_isEven___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_exp___boxed(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_pred(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_eq___boxed(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_pred___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_ge___boxed(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc_x27___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_poof___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_dec___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_exp(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_eq___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_fac(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_sub(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_fac___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_mul(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isOdd___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_pred(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_add(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_pred___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_exp___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_id___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_add___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isEq0___boxed(lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isEq0(lean_object*);
+uint8_t l_instDecidableNot___rarg(uint8_t);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_ge___boxed(lean_object*, lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven(lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_gt(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_id(lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_lt(lean_object*, lean_object*);
 uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_le___boxed(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_fac(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc___boxed(lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_isEq0(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_add___boxed(lean_object*, lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_eq(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_mul___boxed(lean_object*, lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_ge(lean_object*, lean_object*);
+static uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__1;
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_inc(lean_object*);
 lean_object* lean_nat_sub(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id_x27(lean_object*);
 lean_object* lean_nat_mul(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_dec(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_sub(lean_object*, lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_lt(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_dec___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_exp(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_gt___boxed(lean_object*, lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_gt(lean_object*, lean_object*);
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_le(lean_object*, lean_object*);
+static uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__2;
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_le(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_dec(lean_object*);
 lean_object* lean_nat_add(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_isEq0___boxed(lean_object*);
-static lean_object* _init_l_DMT1_natArithmetic_three() {
-_start:
-{
-lean_object* x_1; 
-x_1 = lean_unsigned_to_nat(3u);
-return x_1;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_le___boxed(lean_object*, lean_object*);
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isOdd(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_lt___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_inc___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_id(lean_object* x_1) {
 _start:
 {
 lean_inc(x_1);
 return x_1;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_id___boxed(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_id(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_id(x_1);
 lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id_x27(lean_object* x_1) {
-_start:
-{
-lean_inc(x_1);
-return x_1;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_id_x27___boxed(lean_object* x_1) {
-_start:
-{
-lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_id_x27(x_1);
-lean_dec(x_1);
-return x_2;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_inc(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; 
@@ -104,34 +78,16 @@ x_3 = lean_nat_add(x_1, x_2);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_inc___boxed(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_inc(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_inc(x_1);
 lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc_x27(lean_object* x_1) {
-_start:
-{
-lean_object* x_2; lean_object* x_3; 
-x_2 = lean_unsigned_to_nat(1u);
-x_3 = lean_nat_add(x_1, x_2);
-return x_3;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_inc_x27___boxed(lean_object* x_1) {
-_start:
-{
-lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_inc_x27(x_1);
-lean_dec(x_1);
-return x_2;
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_pred(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_pred(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; uint8_t x_3; 
@@ -152,33 +108,33 @@ return x_6;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_pred___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_pred___boxed(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_pred(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_pred(x_1);
 lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_dec(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_dec(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_pred(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_pred(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_dec___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_dec___boxed(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_dec(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_dec(x_1);
 lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_fac(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_fac(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; uint8_t x_3; 
@@ -190,7 +146,7 @@ lean_object* x_4; lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_obj
 x_4 = lean_unsigned_to_nat(1u);
 x_5 = lean_nat_sub(x_1, x_4);
 x_6 = lean_nat_add(x_5, x_4);
-x_7 = l_DMT1_natArithmetic_fac(x_5);
+x_7 = l_DMT1_Lectures_L04__nat__arithmetic_domain_fac(x_5);
 lean_dec(x_5);
 x_8 = lean_nat_mul(x_6, x_7);
 lean_dec(x_7);
@@ -205,16 +161,16 @@ return x_9;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_fac___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_fac___boxed(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_natArithmetic_fac(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_fac(x_1);
 lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_add(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_add(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; uint8_t x_4; 
@@ -225,7 +181,7 @@ if (x_4 == 0)
 lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; 
 x_5 = lean_unsigned_to_nat(1u);
 x_6 = lean_nat_sub(x_2, x_5);
-x_7 = l_DMT1_natArithmetic_add(x_1, x_6);
+x_7 = l_DMT1_Lectures_L04__nat__arithmetic_domain_add(x_1, x_6);
 lean_dec(x_6);
 x_8 = lean_nat_add(x_7, x_5);
 lean_dec(x_7);
@@ -238,17 +194,17 @@ return x_1;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_add___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_add___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_natArithmetic_add(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_add(x_1, x_2);
 lean_dec(x_2);
 lean_dec(x_1);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_sub(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_sub(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; uint8_t x_4; 
@@ -287,7 +243,7 @@ return x_10;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_mul(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_mul(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; uint8_t x_4; 
@@ -298,9 +254,9 @@ if (x_4 == 0)
 lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; 
 x_5 = lean_unsigned_to_nat(1u);
 x_6 = lean_nat_sub(x_2, x_5);
-x_7 = l_DMT1_natArithmetic_mul(x_1, x_6);
+x_7 = l_DMT1_Lectures_L04__nat__arithmetic_domain_mul(x_1, x_6);
 lean_dec(x_6);
-x_8 = l_DMT1_natArithmetic_add(x_1, x_7);
+x_8 = l_DMT1_Lectures_L04__nat__arithmetic_domain_add(x_1, x_7);
 lean_dec(x_7);
 return x_8;
 }
@@ -312,17 +268,17 @@ return x_9;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_mul___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_mul___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_natArithmetic_mul(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_mul(x_1, x_2);
 lean_dec(x_2);
 lean_dec(x_1);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_exp(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_exp(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; uint8_t x_4; 
@@ -333,7 +289,7 @@ if (x_4 == 0)
 lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; 
 x_5 = lean_unsigned_to_nat(1u);
 x_6 = lean_nat_sub(x_2, x_5);
-x_7 = l_DMT1_natArithmetic_exp(x_1, x_6);
+x_7 = l_DMT1_Lectures_L04__nat__arithmetic_domain_exp(x_1, x_6);
 lean_dec(x_6);
 x_8 = lean_nat_mul(x_1, x_7);
 lean_dec(x_7);
@@ -347,17 +303,17 @@ return x_9;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_exp___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_exp___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_natArithmetic_exp(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_exp(x_1, x_2);
 lean_dec(x_2);
 lean_dec(x_1);
 return x_3;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_isEq0(lean_object* x_1) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isEq0(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; uint8_t x_3; 
@@ -366,17 +322,17 @@ x_3 = lean_nat_dec_eq(x_1, x_2);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_isEq0___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isEq0___boxed(lean_object* x_1) {
 _start:
 {
 uint8_t x_2; lean_object* x_3; 
-x_2 = l_DMT1_natArithmetic_isEq0(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_isEq0(x_1);
 lean_dec(x_1);
 x_3 = lean_box(x_2);
 return x_3;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_poof(lean_object* x_1) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; uint8_t x_3; 
@@ -414,111 +370,44 @@ return x_10;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_poof___boxed(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven___boxed(lean_object* x_1) {
 _start:
 {
 uint8_t x_2; lean_object* x_3; 
-x_2 = l_DMT1_natArithmetic_poof(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven(x_1);
 x_3 = lean_box(x_2);
 return x_3;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_isEven(lean_object* x_1) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_isOdd(lean_object* x_1) {
 _start:
 {
 uint8_t x_2; 
-x_2 = l_DMT1_natArithmetic_poof(x_1);
-return x_2;
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_isEven(x_1);
+if (x_2 == 0)
+{
+uint8_t x_3; 
+x_3 = 1;
+return x_3;
+}
+else
+{
+uint8_t x_4; 
+x_4 = 0;
+return x_4;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_isEven___boxed(lean_object* x_1) {
+}
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_isOdd___boxed(lean_object* x_1) {
 _start:
 {
 uint8_t x_2; lean_object* x_3; 
-x_2 = l_DMT1_natArithmetic_isEven(x_1);
+x_2 = l_DMT1_Lectures_L04__nat__arithmetic_domain_isOdd(x_1);
 x_3 = lean_box(x_2);
 return x_3;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_le(lean_object* x_1, lean_object* x_2) {
-_start:
-{
-lean_object* x_3; uint8_t x_4; 
-x_3 = lean_unsigned_to_nat(0u);
-x_4 = lean_nat_dec_eq(x_1, x_3);
-if (x_4 == 0)
-{
-lean_object* x_5; lean_object* x_6; uint8_t x_7; 
-x_5 = lean_unsigned_to_nat(1u);
-x_6 = lean_nat_sub(x_1, x_5);
-lean_dec(x_1);
-x_7 = lean_nat_dec_eq(x_2, x_3);
-if (x_7 == 0)
-{
-lean_object* x_8; 
-x_8 = lean_nat_sub(x_2, x_5);
-lean_dec(x_2);
-x_1 = x_6;
-x_2 = x_8;
-goto _start;
-}
-else
-{
-uint8_t x_10; 
-lean_dec(x_6);
-lean_dec(x_2);
-x_10 = 0;
-return x_10;
-}
-}
-else
-{
-uint8_t x_11; 
-lean_dec(x_2);
-lean_dec(x_1);
-x_11 = 1;
-return x_11;
-}
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_le___boxed(lean_object* x_1, lean_object* x_2) {
-_start:
-{
-uint8_t x_3; lean_object* x_4; 
-x_3 = l_DMT1_natArithmetic_le(x_1, x_2);
-x_4 = lean_box(x_3);
-return x_4;
-}
-}
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_gt(lean_object* x_1, lean_object* x_2) {
-_start:
-{
-uint8_t x_3; 
-x_3 = l_DMT1_natArithmetic_le(x_1, x_2);
-if (x_3 == 0)
-{
-uint8_t x_4; 
-x_4 = 1;
-return x_4;
-}
-else
-{
-uint8_t x_5; 
-x_5 = 0;
-return x_5;
-}
-}
-}
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_gt___boxed(lean_object* x_1, lean_object* x_2) {
-_start:
-{
-uint8_t x_3; lean_object* x_4; 
-x_3 = l_DMT1_natArithmetic_gt(x_1, x_2);
-x_4 = lean_box(x_3);
-return x_4;
-}
-}
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_eq(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_eq(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; uint8_t x_4; 
@@ -559,22 +448,118 @@ return x_11;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_eq___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_eq___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 uint8_t x_3; lean_object* x_4; 
-x_3 = l_DMT1_natArithmetic_eq(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_eq(x_1, x_2);
 x_4 = lean_box(x_3);
 return x_4;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_lt(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_le(lean_object* x_1, lean_object* x_2) {
+_start:
+{
+lean_object* x_3; uint8_t x_4; 
+x_3 = lean_unsigned_to_nat(0u);
+x_4 = lean_nat_dec_eq(x_1, x_3);
+if (x_4 == 0)
+{
+lean_object* x_5; lean_object* x_6; uint8_t x_7; 
+x_5 = lean_unsigned_to_nat(1u);
+x_6 = lean_nat_sub(x_1, x_5);
+lean_dec(x_1);
+x_7 = lean_nat_dec_eq(x_2, x_3);
+if (x_7 == 0)
+{
+lean_object* x_8; 
+x_8 = lean_nat_sub(x_2, x_5);
+lean_dec(x_2);
+x_1 = x_6;
+x_2 = x_8;
+goto _start;
+}
+else
+{
+uint8_t x_10; 
+lean_dec(x_6);
+lean_dec(x_2);
+x_10 = 0;
+return x_10;
+}
+}
+else
+{
+uint8_t x_11; 
+lean_dec(x_2);
+lean_dec(x_1);
+x_11 = 1;
+return x_11;
+}
+}
+}
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_le___boxed(lean_object* x_1, lean_object* x_2) {
+_start:
+{
+uint8_t x_3; lean_object* x_4; 
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_le(x_1, x_2);
+x_4 = lean_box(x_3);
+return x_4;
+}
+}
+static uint8_t _init_l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__1() {
+_start:
+{
+uint8_t x_1; uint8_t x_2; 
+x_1 = 0;
+x_2 = l_instDecidableNot___rarg(x_1);
+return x_2;
+}
+}
+static uint8_t _init_l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__2() {
+_start:
+{
+uint8_t x_1; uint8_t x_2; 
+x_1 = 1;
+x_2 = l_instDecidableNot___rarg(x_1);
+return x_2;
+}
+}
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_gt(lean_object* x_1, lean_object* x_2) {
+_start:
+{
+uint8_t x_3; 
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_le(x_1, x_2);
+if (x_3 == 0)
+{
+uint8_t x_4; 
+x_4 = l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__1;
+return x_4;
+}
+else
+{
+uint8_t x_5; 
+x_5 = l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__2;
+return x_5;
+}
+}
+}
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___boxed(lean_object* x_1, lean_object* x_2) {
+_start:
+{
+uint8_t x_3; lean_object* x_4; 
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_gt(x_1, x_2);
+x_4 = lean_box(x_3);
+return x_4;
+}
+}
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_lt(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 uint8_t x_3; 
 lean_inc(x_2);
 lean_inc(x_1);
-x_3 = l_DMT1_natArithmetic_le(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_le(x_1, x_2);
 if (x_3 == 0)
 {
 uint8_t x_4; 
@@ -586,7 +571,7 @@ return x_4;
 else
 {
 uint8_t x_5; 
-x_5 = l_DMT1_natArithmetic_eq(x_1, x_2);
+x_5 = l_DMT1_Lectures_L04__nat__arithmetic_domain_eq(x_1, x_2);
 if (x_5 == 0)
 {
 uint8_t x_6; 
@@ -602,26 +587,26 @@ return x_7;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_lt___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_lt___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 uint8_t x_3; lean_object* x_4; 
-x_3 = l_DMT1_natArithmetic_lt(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_lt(x_1, x_2);
 x_4 = lean_box(x_3);
 return x_4;
 }
 }
-LEAN_EXPORT uint8_t l_DMT1_natArithmetic_ge(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT uint8_t l_DMT1_Lectures_L04__nat__arithmetic_domain_ge(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 uint8_t x_3; 
 lean_inc(x_2);
 lean_inc(x_1);
-x_3 = l_DMT1_natArithmetic_gt(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_gt(x_1, x_2);
 if (x_3 == 0)
 {
 uint8_t x_4; 
-x_4 = l_DMT1_natArithmetic_eq(x_1, x_2);
+x_4 = l_DMT1_Lectures_L04__nat__arithmetic_domain_eq(x_1, x_2);
 return x_4;
 }
 else
@@ -634,11 +619,11 @@ return x_5;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_natArithmetic_ge___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_L04__nat__arithmetic_domain_ge___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 uint8_t x_3; lean_object* x_4; 
-x_3 = l_DMT1_natArithmetic_ge(x_1, x_2);
+x_3 = l_DMT1_Lectures_L04__nat__arithmetic_domain_ge(x_1, x_2);
 x_4 = lean_box(x_3);
 return x_4;
 }
@@ -652,8 +637,8 @@ _G_initialized = true;
 res = initialize_Init(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-l_DMT1_natArithmetic_three = _init_l_DMT1_natArithmetic_three();
-lean_mark_persistent(l_DMT1_natArithmetic_three);
+l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__1 = _init_l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__1();
+l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__2 = _init_l_DMT1_Lectures_L04__nat__arithmetic_domain_gt___closed__2();
 return lean_io_result_mk_ok(lean_box(0));
 }
 #ifdef __cplusplus
