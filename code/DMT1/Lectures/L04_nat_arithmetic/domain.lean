@@ -31,6 +31,18 @@ def fac : Nat → Nat
 | (n' + 1) => (n' + 1) * fac n'
 
 
+inductive Tree : Type
+| empty
+| node (n : Nat) (l r : Tree)
+
+def size : Tree → Nat
+| Tree.empty => 0
+| Tree.node _ l r => 1 + size l + size r
+
+def sum : Tree → Nat
+| Tree.empty => 0
+| Tree.node n l r => n + sum l + sum r
+
 /-!
 ### Binary Operations
 -/
