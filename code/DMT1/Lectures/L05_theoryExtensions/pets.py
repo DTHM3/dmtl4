@@ -31,7 +31,7 @@ problem_specification = \
         dogs_constraint, \
         rodents_constraint, \
         total_animals_constraint, \
-        total_cost_constraint \
+        total_cost_constraint, \
     )
 
 

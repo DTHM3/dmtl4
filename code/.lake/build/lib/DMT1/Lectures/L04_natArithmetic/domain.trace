@@ -1,0 +1,41 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=.\\.\\.lake/packages\\Cli\\.lake\\build\\lib;.\\.\\.lake/packages\\batteries\\.lake\\build\\lib;.\\.\\.lake/packages\\Qq\\.lake\\build\\lib;.\\.\\.lake/packages\\aesop\\.lake\\build\\lib;.\\.\\.lake/packages\\proofwidgets\\.lake\\build\\lib;.\\.\\.lake/packages\\importGraph\\.lake\\build\\lib;.\\.\\.lake/packages\\LeanSearchClient\\.lake\\build\\lib;.\\.\\.lake/packages\\plausible\\.lake\\build\\lib;.\\.\\.lake/packages\\mathlib\\.lake\\build\\lib;.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---v4.16.0-rc2\\bin\\lean.exe .\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\Lectures\\L04_natArithmetic\\domain.olean -i .\\.\\.lake\\build\\lib\\DMT1\\Lectures\\L04_natArithmetic\\domain.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\Lectures\\L04_natArithmetic\\domain.c --json",
+   "level": "trace"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:14:0: Nat : Type",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:43:0: 0",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:44:0: 1 : ℕ",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:107:0: 0",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:108:0: 0",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:109:0: 0",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:110:0: 3",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:171:0: true",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:193:0: true",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:194:0: false",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:195:0: true",
+   "level": "info"},
+  {"message":
+   ".\\.\\.\\.\\DMT1\\Lectures\\L04_natArithmetic\\domain.lean:196:0: false",
+   "level": "info"}],
+ "depHash": "17055234021816424548"}
