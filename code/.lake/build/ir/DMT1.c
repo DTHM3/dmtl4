@@ -1,6 +1,10 @@
 // Lean compiler output
 // Module: DMT1
+<<<<<<< HEAD
 // Imports: Init DMT1.Lectures.L02_propLogic.formal.syntax DMT1.Lectures.L02_propLogic.formal.semantics DMT1.Lectures.L02_propLogic.formal.interpretation DMT1.Lectures.L02_propLogic.formal.domain DMT1.Lectures.L02_propLogic.formal.axioms DMT1.Lectures.L02_propLogic.formal.identities DMT1.Lectures.L02_propLogic.formal.utilities DMT1.myWork.hw.hw3.syntax DMT1.myWork.hw.hw3.domain DMT1.myWork.hw.hw3.semantics DMT1.myWork.hw.hw3.axioms DMT1.myWork.hw.hw3.interpretation DMT1.myWork.hw.hw3.utilities DMT1.Lectures.L03_modelTheory.models DMT1.Lectures.L03_modelTheory.counterexamples DMT1.Lectures.L03_modelTheory.truthTable DMT1.Lectures.L03_modelTheory.properties DMT1.Lectures.L03_modelTheory.validity DMT1.Lectures.L04_nat_arithmetic.syntax DMT1.Lectures.L04_nat_arithmetic.semantics DMT1.Lectures.L04_nat_arithmetic.domain
+=======
+// Imports: Init DMT1.Lectures.L02_propLogic.formal.syntax DMT1.Lectures.L02_propLogic.formal.semantics DMT1.Lectures.L02_propLogic.formal.interpretation DMT1.Lectures.L02_propLogic.formal.domain DMT1.Lectures.L02_propLogic.formal.axioms DMT1.Lectures.L02_propLogic.formal.identities DMT1.Lectures.L02_propLogic.formal.utilities DMT1.MyWork.hw3.syntax DMT1.MyWork.hw3.domain DMT1.MyWork.hw3.semantics DMT1.MyWork.hw3.axioms DMT1.MyWork.hw3.interpretation DMT1.MyWork.hw3.utilities DMT1.Lectures.L03_modelTheory.models DMT1.Lectures.L03_modelTheory.counterexamples DMT1.Lectures.L03_modelTheory.truthTable DMT1.Lectures.L03_modelTheory.properties DMT1.Lectures.L03_modelTheory.validity DMT1.Lectures.L04_natArithmetic.syntax DMT1.Lectures.L04_natArithmetic.semantics DMT1.Lectures.L04_natArithmetic.domain
+>>>>>>> 5d2cccf82697a0ff808775839669f056fe6b1078
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
