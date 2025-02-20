@@ -35,7 +35,12 @@ That's it!
 import DMT1.Lectures.L02_propLogic.formal.syntax
 import DMT1.Lectures.L02_propLogic.formal.domain
 
+<<<<<<< HEAD
 namespace DMT1.lecture.propLogic.semantics
+=======
+namespace DMT1.Lectures.propLogic.semantics
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 open propLogic.syntax
 ```
 
@@ -123,5 +128,9 @@ a justifiably confident grasp of essentially every aspect
 of the syntax and semantics of propositional logic.
 
 ```lean
+<<<<<<< HEAD
 end DMT1.lecture.propLogic.semantics
+=======
+end DMT1.Lectures.propLogic.semantics
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```

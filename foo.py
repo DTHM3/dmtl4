@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import os
 
+<<<<<<< HEAD
+=======
+# comment
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 # Function to fetch and parse a webpage
 def get_page_content(url):
     headers = {

@@ -24,6 +24,11 @@ and ask questions, often getting answers very quickly.
 - [Kevin Buzzard's Intro](https://leanprover-community.github.io/lean-perfectoid-spaces/type_theory.html)
 - [Lean for the Curious Mathematician (2023 edition)](https://lftcm2023.github.io/tutorial/index.html)
 - [Learning Resources](https://leanprover-community.github.io/learn.html)
+<<<<<<< HEAD
+=======
+- [The Type Theory of Lean](https://github.com/digama0/lean-type-theory/releases)
+- [Type Checking in Lean](https://ammkrn.github.io/type_checking_in_lean4/)
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 - [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
 
 ## Books on Closely Related Concepts and Tools (mainly Coq)

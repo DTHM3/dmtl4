@@ -16,8 +16,15 @@ able to use them here without prefixes.
 
 import DMT1.Lectures.L02_propLogic.formal.syntax
 
+<<<<<<< HEAD
 namespace DMT1.lecture.propLogic.axioms
 open propLogic.syntax
+=======
+namespace DMT1.Lectures.propLogic.axioms
+
+open propLogic.syntax
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 open Expr
 
 
@@ -89,4 +96,8 @@ as good examples of expressions we can write now using
 the syntax we've defined.
 @@@ -/
 
+<<<<<<< HEAD
 end DMT1.lecture.propLogic.axioms
+=======
+end DMT1.Lectures.propLogic.axioms
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

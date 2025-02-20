@@ -2,11 +2,21 @@
 import Mathlib.Data.Set.Basic
 import Mathlib.Logic.Relation
 
+<<<<<<< HEAD
 namespace DMT1.Lectures.L04_natArithmetic.domain
+=======
+namespace DMT1.Lectures.natArithmetic.domain
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```
 
 # Domain: natural number arithmetic
 
+<<<<<<< HEAD
+=======
+<!-- toc -->
+
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ## The Nat Type
 
 We use Lean's definition of the Nat type.
@@ -318,5 +328,9 @@ no longer be able to compute whether a given object
 all inputs), but will instead have to construct a
 proof of that proposition for any given program.
 ```lean
+<<<<<<< HEAD
 end DMT1.Lectures.L04_natArithmetic.domain
+=======
+end DMT1.Lectures.natArithmetic.domain
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```

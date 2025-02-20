@@ -18,9 +18,19 @@ being *unsatisfiable?* And does "e" have the property of being
 @@@ -/
 
 import DMT1.Lectures.L03_modelTheory.truthTable
+<<<<<<< HEAD
 namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 
+=======
+
+-- TODO: Fix namespace names in this unit
+namespace DMT1.Lectures.propLogic.semantics.models
+
+open propLogic.syntax
+open propLogic.utilities
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 /- @@@
 ## Satisfiability
 
@@ -43,4 +53,8 @@ Validity means that a proposition is true under all interpretations
 def is_valid :  Expr → Bool :=
   λ e => reduce_and (truthTableOutputs e)
 
+<<<<<<< HEAD
 end DMT1.lecture.propLogic.semantics.models
+=======
+end DMT1.Lectures.propLogic.semantics.models
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

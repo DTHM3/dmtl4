@@ -35,3 +35,8 @@ depth = 2
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 renderer = ["html"]
+<<<<<<< HEAD
+=======
+
+[preprocessor.image-size]
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

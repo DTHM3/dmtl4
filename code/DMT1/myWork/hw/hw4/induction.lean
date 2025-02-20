@@ -1,4 +1,4 @@
-/-!
+/- @@@
 # Induction
 
 Can we easily imagine a function that computes
@@ -8,9 +8,12 @@ As such a function consumes a natural number value
 and returns another natural number value, it's type
 must be *Nat → Nat*. But can we compute the value of
 the function for *any* n?
--/
 
-/-!
+<!-- toc -->
+
+@@@ -/
+
+/- @@@
 ## A Manual Approach
 
 First, we could fill in a table of function values
@@ -56,9 +59,9 @@ So, to compute 5! for the right hand column in row n = 5,
 you just multiply 5 by the result you must already have
 for n' = 4. That's it, unless n = 0, in which case, the
 answer is already there from the initialization.
--/
+@@@ -/
 
-/-!
+/- @@@
 The preceding demonstration and analysis should leave you
 convinced that in principle we could compute n! for any n.
 Fill in the first row, then repeat the procedure to get the
@@ -71,9 +74,9 @@ That's pretty cool. To make use of it in computer science,
 we need to formalize these ideas. Here we'll formalize them
 in the logic of Lean, as propositional logic is too simple
 to represent these rich ideas.
--/
+@@@ -/
 
-/-
+/- @@@
 ## Specification: Base and Step Functions
 
 So let's now look at what we're doing here with precision.
@@ -86,11 +89,11 @@ values are those in the second column, fac n.
 
 So, first, we'll specify the value of fac n for the base case,
 where n = 0. The value is one, and we'll call it facBase.
--/
+@@@ -/
 
 def facBase := 1
 
-/-!
+/- @@@
 Now comes the interesting part. To compute each subsequent
 value, we repeatedly applied the same formula, just moving
 the index up by one each time, and building a new answer on
@@ -122,7 +125,7 @@ when trying to compute fac n, into *arguments* to a function.
 The person who "implements" the function assumes they get the
 named values as arguments and then computes the right result
 and returns it accordingly.
--/
+@@@ -/
 
 def facStep : Nat → Nat → Nat
 | n', facn' => (n' + 1) * facn'
@@ -137,7 +140,7 @@ def facStep : Nat → Nat → Nat
 #eval facStep 3   6         -- n = 4,   24
 #eval facStep 4   24        -- n = 5,   _
 
-/-!
+/- @@@
 ## Induction
 
 Ok, that's all super-cool, and formalizing it in Lean has
@@ -172,11 +175,11 @@ the step machine n times to get the final answer.
 
 In Lean, the induction principle (function!) in Lean for
 the natural numbers is called Nat.rec.
--/
+@@@ -/
 
 def fac : Nat → Nat := Nat.rec facBase facStep
 
-/-!
+/- @@@
 Let's break that down. We are defining fac as the name of
 a function that takes a Nat argument and returns a Nat
 results. That's the type of the factorial function, as we
@@ -185,7 +188,7 @@ that fac will name is *computed* by passing the base value
 and the step function to the induction function for Nats!
 
 And by golly, it works.
--/
+@@@ -/
 
 #eval fac 0   -- expect 1
 #eval fac 1   -- expect 1
@@ -194,7 +197,7 @@ And by golly, it works.
 #eval fac 4   -- expect 24
 #eval fac 5   -- expect 120
 
-/-!
+/- @@@
 ## Another Example
 
 Compute the sum of all the natural numbers up to any n.
@@ -204,7 +207,7 @@ Now specify your step function: a function that takes n' and
 *sum* n' and that returns *sum n*. Finally, pass these two
 "little machines" to the Nat.rec to get a function that will
 work for all n. Then have fun!
--/
+@@@ -/
 
 def baseSum := 0
 def stepSum (n' sumn' : Nat) := (n' + 1) + sumn'
@@ -219,7 +222,30 @@ def sum : Nat → Nat := Nat.rec baseSum stepSum
 #eval sum 5   -- expect 15
 
 
-/-!
+#check Nat.rec
+
+/- @@@
+Nat.rec.{u}
+  {motive : Nat → Sort u}
+  (zero : motive Nat.zero)
+  (succ : (n : Nat) → motive n → motive n.succ)
+  (t : Nat) :
+  motive t
+@@@ -/
+
+#check List.rec
+
+/- @@@
+List.rec.{u_1, u} {α : Type u}
+  {motive : List α → Sort u_1}
+  (nil : motive [])
+  (cons : (head : α) → (tail : List α) → motive tail → motive (head :: tail))
+  (t : List α) :
+  motive t
+@@@ -/
+
+
+/-  @@@
 ## Notation
 
 From now on, think of induction as building
@@ -234,9 +260,9 @@ but write down your base value and inductive step
 functions. What you no longer need deal with is
 the awkward separate definition then combination
 of the smaller machines.
--/
+@@@ -/
 
-/-!
+/- @@@
 Let's break this definition down.
 
 We define a function, sum', that returns the sum of
@@ -255,7 +281,7 @@ machines! In the case of n = 0, we return 0. In the case
 n = n' + 1 (n greater than 0), we return (n' + 1) + sum n.
 That is, we apply the step function to n' and sum n', just
 as we did earlier. And it all works.
--/
+@@@ -/
 def sum' : Nat → Nat :=
 fun n => match n with
 | Nat.zero => Nat.zero
@@ -264,7 +290,7 @@ fun n => match n with
 #eval sum' 0    -- expect 0
 #eval sum' 5    -- expect 15
 
-/-!
+/-  @@@
 ## Lean preferred notation
 
 When writing such definitions, however, it's preferred
@@ -280,7 +306,7 @@ latter is *not* what you want in a case analysis pattern
 where you intend to match with Nat.succ n' for some n'
 
 So here's the cleaned up code you should actually write.
--/
+@@@ -/
 
 def summ : Nat → Nat
 | 0 => 0
@@ -288,15 +314,15 @@ def summ : Nat → Nat
 
 #eval summ 100
 
-/-!
+/- @@@
 Lean's preferred notation for specifying such functions
 really does involve specifying the two smaller machines.
 Just look carefully at right sides of the two cases! The
 base case is 0. On the right for the inductive case is the
 step function! summ n = summ n' + 1 = (n' + 1) + summ n'.
--/
+@@@ -/
 
-/-!
+/- @@@
 ## Unrolling recursions
 
 Ok, so the induction principle seems wildly useful, and it
@@ -312,9 +338,9 @@ function to 5, to compute the sum of the numbers from 0 to 5,
 which we can easily calculate to be 15. Be careful to read the
 notes about which cases in the function definition the different
 arguments match.
--/
+@@@ -/
 
-/-!
+/- @@@
 sum 5                               -- matches n'+1 pattern; reduces to following:
 5 + (sum 4)                         -- same rule: keep reducing nested applications
 5 + (4 + (sum 3))                   --
@@ -327,9 +353,9 @@ sum 5                               -- matches n'+1 pattern; reduces to followin
 5 + (4 + (6))
 5 + (10)
 15                                  -- the result for 5
--/
+@@@ -/
 
-/-!
+/- @@@
 ## Forget about unrolling recursions
 
 Now that you've seen how a recursion unfolds during actual
@@ -341,9 +367,9 @@ answer for n' as arguments and producing the answer for n),
 and induction will iterate the step function n times over
 the result from the "base function." The only "hard" job
 for you is usually to figure out the right step function.
--/
+@@@ -/
 
-/-!
+/- @@@
 ## Exercises
 
 ### Sum of Squares of Nats Up To n
@@ -359,7 +385,7 @@ presented above, but now for this function. As you fill
 it in, pay close attention to the possibility of filling
 in each row using the values from the previous row. That
 will tell you what your step function will be.
--/
+@@@ -/
 
 
 -- base value machine
@@ -368,7 +394,11 @@ def baseSq : Nat := 0
 -- step up answer machine
 -- from n' and sumSq n' return (n' + 1)^2 + sumSq n'
 def stepSq : Nat → Nat → Nat
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
 | n', sum_sq_n' => (n' + 1) * (n' + 1) + sum_sq_n'
+========
+| n', sum_sq_n' => sorry
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
 
 -- here's how the stepping up works
 #eval stepSq 0 0  -- return answer for n = 1; expect 1
@@ -399,18 +429,18 @@ def sumSq' : Nat → Nat
 #eval sumSq' 4   -- expect 30
 #eval sumSq' 5   -- expect 55  (weird: also sum of nat 0..10)
 
-/-!
+/-  @@@
 Format your table here
--/
+ @@@ -/
 
-/-!
+/-  @@@
 Now write test cases as above, including "expect"
 comments based on your table entries above, and be
 sure your tests (using #eval) are giving the results
 you expect. Example: sumSq 2 = 2^2 + 1^2 + 0^2 = 5.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Nat to BinaryNumeral
 
 Define a function that converts any natural number n
@@ -438,7 +468,7 @@ digit of "100". And 5/2 = 1, the rightmost digit of
 "101". The remainder when dividing by 2 is also
 called n mod 2, or n % 2 in many popular programming
 languages.
--/
+@@@  -/
 
 #eval 0 % 2
 #eval 1 % 2
@@ -447,16 +477,16 @@ languages.
 #eval 4 % 2
 #eval 5 % 2
 
-/-
+/- @@@
 So given any n we now have a way to get its
 rightmost digit in binary by taking the number
 mod 2. As an aside, we can easily convert such
 a 0/1 natural number to a string using toString.
--/
+@@@ -/
 
 #eval toString 5
 
-/-
+/-  @@@
 But what about converting the rest of the input
 to binary digits? What even is "the rest" of the
 input. Well, in this case, it's n/2, right? When
@@ -482,18 +512,18 @@ the function here, and write test cases for n up to
 
 By the way, you can append to strings in Lean using
 the String.append function, with notation, ++.
--/
+ @@@ -/
 
 #eval "10" ++ "1"
 
-/-! Complete this function definition using preferred
+/- @@@ Complete this function definition using preferred
 notation based on your known base and step "machines".
 We provide most of an answer. *Do not guess*. Figure
 it out! After the ++ comes the length-one "0" or "1"
 string for the rightmost digit in the binary numeral.
 What completes the answer by appearing to the left
 of the ++ ((String append)?
--/
+ @@@ -/
 
 /-
 def sumSq' : Nat → Nat
@@ -506,13 +536,17 @@ def binaryRep : Nat → String
 | 0 => "0"
 | 1 => "1"
 | n' + 2 => let n := n' + 2
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
             binaryRep (n / 2) ++ toString (n % 2)
+========
+            sorry ++ toString (n % 2)
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
 
 -- Complete the definition. The tests will work,.
 #eval binaryRep 0   --expect "0"
 #eval binaryRep 5   --expect "101"
 
-/-!
+/- @@@
 ### Other Induction Axioms
 
 Interesting. We've got ourselves a recursive
@@ -551,9 +585,9 @@ we can usually assume access to answer for *all
 smaller" values of n' (e.g., lesser by one, or
 quotient by 2), by way of recursive calls with
 these values as actual parameters.
--/
+@@@ -/
 
-/-!
+/-  @@@
 ### Specifying the Fibonacci Function
 
 Haha. So we finally get to the exercise. You
@@ -593,15 +627,22 @@ just one but both one and two rows back.
 
 Final hint: Define two base cases, for n = 0 and n = 1, then a
 third case for the indutive construction, for any n = (n' + 2).
--/
+@@@ -/
 
 def fib : Nat → Nat
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
 | 0 => 0
 | 1 => 1
 | n' + 2 => fib (n' + 1) + fib n'
+========
+| 0 => sorry
+| 1 => sorry
+| n' + 2 => sorry
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
 
-/-
+/- @@@
 Write test cases for 0, 1, 2, and 10. Does it work?
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
 -/
 
 #eval fib 0
@@ -610,3 +651,38 @@ Write test cases for 0, 1, 2, and 10. Does it work?
 #eval fib 8
 #eval fib 9
 #eval fib 10
+========
+ @@@ -/
+
+/- @@@
+What we see in the definition of the Fibonacci function
+are two base cases and a "step" function that uses the
+results of the prior *two* computations for all inputs
+greater than or equal to two.
+
+The Nat induction principle we've see up to now does
+not rely on multiple prior values. This function does.
+So it must be using a different notion of induction,
+and that's exactly right. In strong induction, at each
+step one can assume one has not only the result for the
+immediately preceding argument, but for the answers for
+*all* prior argument values.
+
+The Fibonacci function is a special case. It assumes it
+has, and it uses, the prior *two* outputs to compute the
+output for the next larger input value. The variant of
+simple induction (for Nat values) used here is called
+*strong induction*. We're not yet prepared to use it
+directly to define recursive functions like *fib*, but
+you should now be able at least to read and understand
+it. Your assignment here, then, is simply to express
+the formal definition in easy to understand English.
+In Lean, strong induction is supported (for Nat) by
+the axiom called *Nat.strongRecOn*.
+@@@ -/
+
+--
+#check Nat.strongRecOn
+
+open Nat
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean

@@ -1,4 +1,5 @@
 # Propositional Logic
+<<<<<<< HEAD
 
 This page is under construction. 
 
@@ -19,3 +20,5 @@ Lean by (1) extending the syntax, both abstract and concrete, with additional
 connectives corresponding to other Boolean operators (xor, nand, nor, etc.);
 (2) extending the semantics accordingly.
 
+=======
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

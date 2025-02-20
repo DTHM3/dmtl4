@@ -8,6 +8,12 @@ As such a function consumes a natural number value
 and returns another natural number value, it's type
 must be *Nat → Nat*. But can we compute the value of
 the function for *any* n?
+<<<<<<< HEAD
+=======
+
+<!-- toc -->
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 @@@ -/
 
 /- @@@
@@ -391,7 +397,15 @@ def baseSq : Nat := 0
 -- step up answer machine
 -- from n' and sumSq n' return (n' + 1)^2 + sumSq n'
 def stepSq : Nat → Nat → Nat
+<<<<<<< HEAD
 | n', sum_sq_n' => _
+=======
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
+| n', sum_sq_n' => (n' + 1) * (n' + 1) + sum_sq_n'
+========
+| n', sum_sq_n' => sorry
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 -- here's how the stepping up works
 #eval stepSq 0 0  -- return answer for n = 1; expect 1
@@ -518,11 +532,29 @@ What completes the answer by appearing to the left
 of the ++ ((String append)?
  @@@ -/
 
+<<<<<<< HEAD
+=======
+/-
+def sumSq' : Nat → Nat
+| 0 => 0
+| (n' + 1) => let n := n' + 1
+              n^2 + sumSq' n'
+-/
+
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 def binaryRep : Nat → String
 | 0 => "0"
 | 1 => "1"
 | n' + 2 => let n := n' + 2
+<<<<<<< HEAD
             _ ++ toString (n % 2)
+=======
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
+            binaryRep (n / 2) ++ toString (n % 2)
+========
+            sorry ++ toString (n % 2)
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 -- Complete the definition. The tests will work,.
 #eval binaryRep 0   --expect "0"
@@ -600,9 +632,15 @@ grok it! Complete the table in your notes.
 |  5  |  5  |
 |  6  |  8  |
 |  7  | 13  |
+<<<<<<< HEAD
 |  8  | __  |
 |  9  | __  |
 | 10  | __  |
+=======
+|  8  | 21  |
+|  9  | 34  |
+| 10  | 55  |
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 You see how you build an answer for n from answer not
 just one but both one and two rows back.
@@ -612,12 +650,37 @@ third case for the indutive construction, for any n = (n' + 2).
 @@@ -/
 
 def fib : Nat → Nat
+<<<<<<< HEAD
 | 0 => _
 | 1 => _
 | n' + 2 => _
 
 /- @@@
 Write test cases for 0, 1, 2, and 10. Does it work?
+=======
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
+| 0 => 0
+| 1 => 1
+| n' + 2 => fib (n' + 1) + fib n'
+========
+| 0 => sorry
+| 1 => sorry
+| n' + 2 => sorry
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
+
+/- @@@
+Write test cases for 0, 1, 2, and 10. Does it work?
+<<<<<<<< HEAD:code/DMT1/myWork/hw/hw4/induction.lean
+-/
+
+#eval fib 0
+#eval fib 1
+#eval fib 2
+#eval fib 8
+#eval fib 9
+#eval fib 10
+========
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
  @@@ -/
 
 /- @@@
@@ -651,3 +714,7 @@ the axiom called *Nat.strongRecOn*.
 #check Nat.strongRecOn
 
 open Nat
+<<<<<<< HEAD
+=======
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:code/DMT1/Lectures/L04_natArithmetic/induction.lean
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

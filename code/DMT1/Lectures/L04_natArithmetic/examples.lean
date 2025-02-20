@@ -4,6 +4,7 @@ import DMT1.Lectures.L04_natArithmetic.domain
 
 
 
+<<<<<<< HEAD
 namespace DMT1.Lectures.L04_natArithmetic.arithLang.demo
 
 /- @@@
@@ -14,26 +15,55 @@ open DMT1.Lectures.L04_natArithmetic.syntax
 
 
 #check Expr
+=======
+namespace DMT1.Lectures.natArithmetic.arithLang.demo
+
+/- @@@
+# Our Natural Number Arithmetic Language!
+
+<!-- toc -->
+
+@@@ -/
+
+open DMT1.Lectures.natArithmetic.syntax
+
+#check OpExpr
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 /- @@@
 @@@ -/
 -- some arithmetic literal expressions
+<<<<<<< HEAD
 def zero : Expr := Expr.lit 0       -- abstract syntax
 def one  : Expr := {⟨1⟩}        -- our concrete syntax
+=======
+def zero : OpExpr := OpExpr.lit 0       -- abstract syntax
+def one  : OpExpr := {⟨1⟩}        -- our concrete syntax
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 /- @@@
 @@@ -/
 -- some arithmetic variable expressions
+<<<<<<< HEAD
 def X : Expr := Expr.var (Var.mk 0) -- abstract syntax
 def Y := {⟨1⟩}                      -- concrete syntax
 def Z := {⟨2⟩}
 def K := {⟨3⟩}
 def M := {⟨4⟩}
 def N := {⟨5⟩}
+=======
+def X : OpExpr := OpExpr.var (Var.mk 0) -- abstract syntax
+def Y : OpExpr := {⟨1⟩}                      -- concrete syntax
+def Z : OpExpr := {⟨2⟩}
+def K : OpExpr := {⟨3⟩}
+def M : OpExpr := {⟨4⟩}
+def N : OpExpr := {⟨5⟩}
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 /- @@@
 @@@ -/
 -- an example of the kinds of expressions we can now write
+<<<<<<< HEAD
 def e0 : Expr := [5]               -- literal expression
 def e1 : Expr := X                  -- variable expression
 def e2 : Expr := Y                  -- variable expression
@@ -44,6 +74,18 @@ def e6 : Expr := X + [2] * Y  - X   --
 def e7 : Expr := [2] * Y + X - X    --
 def e8 : Expr := [10] - [2] * X     --
 def e9 : Expr := [2] * Y - X        --
+=======
+def e0 : OpExpr := [5]               -- literal expression
+def e1 : OpExpr := X                  -- variable expression
+def e2 : OpExpr := Y                  -- variable expression
+def e3 : OpExpr := Z                  -- variable expression
+def e4 : OpExpr := X + [2]         -- operator (+) expression
+def e5 : OpExpr := X + ([5] * Y) - X  --
+def e6 : OpExpr := X + [2] * Y  - X   --
+def e7 : OpExpr := [2] * Y + X - X    --
+def e8 : OpExpr := [10] - [2] * X     --
+def e9 : OpExpr := [2] * Y - X        --
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 /- @@@
 @@@ -/
@@ -104,4 +146,8 @@ def i230463 : Var → Nat
 #eval ⟦e4⟧ i230463
 #eval ⟦e5⟧ i230463
 
+<<<<<<< HEAD
 end DMT1.Lectures.L04_natArithmetic.arithLang.demo
+=======
+end DMT1.Lectures.natArithmetic.arithLang.demo
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

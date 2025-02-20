@@ -3,7 +3,15 @@
 #### Low-level bit vector routines
 -/
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/DMT1/Lectures/L02_propLogic/formal/utilities.lean.md
 namespace DMT1.lecture.propLogic
+========
+namespace DMT1.MyWork.hw3.utilities
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:src/DMT1/hw/hw3/utilities.lean.md
+=======
+namespace DMT1.Lectures.propLogic.utilities
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 /-!
 Converting natural number indices to corresponding rows of
@@ -81,5 +89,13 @@ where foo : List Bool → Nat → Option Nat
           /-search rest-/
           foo bs len
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/DMT1/Lectures/L02_propLogic/formal/utilities.lean.md
 end DMT1.lecture.propLogic
+========
+end DMT1.MyWork.hw3.utilities
+>>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac:src/DMT1/hw/hw3/utilities.lean.md
+=======
+end DMT1.Lectures.propLogic.utilities
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```

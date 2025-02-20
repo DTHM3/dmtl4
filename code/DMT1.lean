@@ -11,12 +11,21 @@ import DMT1.Lectures.L02_propLogic.formal.axioms
 import DMT1.Lectures.L02_propLogic.formal.identities
 import DMT1.Lectures.L02_propLogic.formal.utilities
 
+<<<<<<< HEAD
 import DMT1.myWork.hw.hw3.syntax
 import DMT1.myWork.hw.hw3.domain
 import DMT1.myWork.hw.hw3.semantics
 import DMT1.myWork.hw.hw3.axioms
 import DMT1.myWork.hw.hw3.interpretation
 import DMT1.myWork.hw.hw3.utilities
+=======
+import DMT1.MyWork.hw3.syntax
+import DMT1.MyWork.hw3.domain
+import DMT1.MyWork.hw3.semantics
+import DMT1.MyWork.hw3.axioms
+import DMT1.MyWork.hw3.interpretation
+import DMT1.MyWork.hw3.utilities
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 import DMT1.Lectures.L03_modelTheory.models
 import DMT1.Lectures.L03_modelTheory.counterexamples
@@ -27,3 +36,10 @@ import DMT1.Lectures.L03_modelTheory.validity
 import DMT1.Lectures.L04_natArithmetic.syntax
 import DMT1.Lectures.L04_natArithmetic.semantics
 import DMT1.Lectures.L04_natArithmetic.domain
+<<<<<<< HEAD
+=======
+
+import DMT1.Lectures.L05_theoryExtensions.syntax
+import DMT1.Lectures.L05_theoryExtensions.semantics
+import DMT1.Lectures.L05_theoryExtensions.domain
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac

@@ -5,7 +5,11 @@
 ```lean
 import DMT1.Lectures.L03_modelTheory.models
 
+<<<<<<< HEAD
 namespace DMT1.lecture.propLogic.semantics.models
+=======
+namespace DMT1.Lectures.propLogic.semantics.models
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 open propLogic.syntax
 ```
 
@@ -36,5 +40,9 @@ as a list of length either zero (called none) or one (called some e), where
 e the specific value in the length-one list of values (an interpertation).
 
 ```lean
+<<<<<<< HEAD
 end DMT1.lecture.propLogic.semantics.models
+=======
+end DMT1.Lectures.propLogic.semantics.models
+>>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```
