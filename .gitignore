@@ -1,3 +1,6 @@
 book/
 .venv/
-/
+book/
+MyWork/
+.lake/
+target/
