@@ -1,9 +1,0 @@
-{"log":
- [{"message":
-<<<<<<< HEAD
-   ".> LEAN_PATH=.\\.\\.lake/packages\\Cli\\.lake\\build\\lib;.\\.\\.lake/packages\\batteries\\.lake\\build\\lib;.\\.\\.lake/packages\\Qq\\.lake\\build\\lib;.\\.\\.lake/packages\\aesop\\.lake\\build\\lib;.\\.\\.lake/packages\\proofwidgets\\.lake\\build\\lib;.\\.\\.lake/packages\\importGraph\\.lake\\build\\lib;.\\.\\.lake/packages\\LeanSearchClient\\.lake\\build\\lib;.\\.\\.lake/packages\\plausible\\.lake\\build\\lib;.\\.\\.lake/packages\\mathlib\\.lake\\build\\lib;.\\.\\.lake\\build\\lib PATH c:\\Users\\Tripp\\.elan\\toolchains\\leanprover--lean4---v4.16.0-rc2\\bin\\lean.exe .\\.\\.\\.\\DMT1\\Lectures\\L03_modelTheory\\models.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\DMT1\\Lectures\\L03_modelTheory\\models.olean -i .\\.\\.lake\\build\\lib\\DMT1\\Lectures\\L03_modelTheory\\models.ilean -c .\\.\\.lake\\build\\ir\\DMT1\\Lectures\\L03_modelTheory\\models.c --json",
-=======
-   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH= /Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/bin/lean ././././DMT1/Lectures/L03_modelTheory/models.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L03_modelTheory/models.olean -i ././.lake/build/lib/DMT1/Lectures/L03_modelTheory/models.ilean -c ././.lake/build/ir/DMT1/Lectures/L03_modelTheory/models.c --json",
->>>>>>> 89f76b0d76affe5d1aeb1451e1ea63d3972e995f
-   "level": "trace"}],
- "depHash": "10074292505546004234"}
