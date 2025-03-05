@@ -1,12 +1,5 @@
 book/
-<<<<<<< HEAD
 .venv/
 book/
-MyWork/
 .lake/
 target/
-=======
-MyWork/
-.lake/
-target/
->>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
