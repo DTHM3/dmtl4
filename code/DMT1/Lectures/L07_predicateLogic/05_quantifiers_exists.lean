@@ -15,8 +15,12 @@ there is (there exists) *some* even natural number.
 @@@ -/
 
 -- Predicate: defines property of *being even*
-def isEven : Nat → Prop := λ n => (n % 2 = 0)
+def isEven' : Nat → Prop := λ n => (n % 2 = 0)
 -- λ means the same thing as fun: a function that ...
+
+inductive isEven : Nat → Prop where
+| ev0 : isEven 0
+| ev2 : ∀ (n : Nat), isEven n → isEven (n + 2)
 
 -- Proposition: there exists an even number
 #check ∃ (n : Nat), isEven n
@@ -61,6 +65,19 @@ Exists p
 ```
 @@@ -/
 
+example : ∃ (n : Nat), isEven n :=
+Exists.intro 0 isEven.ev0
+
+example : ∃ (n : Nat), isEven n :=
+Exists.intro
+  4
+  (
+    isEven.ev2
+      2
+      (
+        isEven.ev2 0 isEven.ev0
+      )
+  )
 /-
 In type theory, proofs of existence are *dependent pairs*,
 of the form, *⟨a : α, h : p a⟩. Note carefully that the type
@@ -73,7 +90,7 @@ Here's a simple example showing that there exists an even
 number, with *4* as a witness.
 @@@ -/
 
-example : exists (n : Nat), isEven n := Exists.intro 4 rfl
+example : exists (n : Nat), isEven' n := Exists.intro 4 rfl
 
 /- @@@
 The witness is 4 and the proof (computed by rfl) is a
@@ -85,7 +102,7 @@ instead of *4* to see what happens.
 Lean provides ⟨ _, _ ⟩ as a notation for Exists.intro.
 @@@ -/
 
-example : ∃ (n : Nat), isEven n := ⟨ 4, rfl ⟩
+example : ∃ (n : Nat), isEven' n := ⟨ 4, rfl ⟩
 
 /- @@@
 We will study the equality relation shortly. For now,
@@ -115,6 +132,8 @@ variable
   (Iris : Dog)                 -- Iris is one
   (Blue : Dog → Prop)          -- The property of being blue
   (iris_is_blue : Blue Iris)   -- Proof that Iris is blue
+
+example : ∃ (d : Dog), Blue d := Exists.intro Iris iris_is_blue
 
 -- A proof that there exists a blue dog
 example : ∃ (d : Dog), Blue d := ⟨ Iris, iris_is_blue ⟩
@@ -225,6 +244,23 @@ by universal specialization, *p* loves Beau. Because *p* is
 arbitrary, this shows (by *forall introduction*) that every
 person loves someone (namely *beau*).
 @@@ -/
+
+namespace testing318
+variable
+  (Person : Type)
+  (Loves : Person → Person → Prop)
+
+example :
+  (∃ (beau : Person), ∀ (p : Person), Loves p beau) →
+  (∀ (p : Person), ∃ (q : Person), Loves p q)
+
+| ⟨ beau, everyone_loves_beau ⟩ =>
+  fun (p : Person) =>
+    ⟨ beau, everyone_loves_beau p ⟩
+
+end testing318
+
+
 
 namespace cs2120f23
 variable
