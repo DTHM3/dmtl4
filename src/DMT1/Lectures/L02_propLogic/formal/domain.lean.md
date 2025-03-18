@@ -25,9 +25,6 @@ The two elements we'll need that Lean doesn't define
 natively are definitions of *implies* and *equivalentTo*.
 -/
 
-<<<<<<< HEAD
-namespace DMT1.lecture.propLogic.semantics.domain
-=======
 namespace DMT1.Lectures.propLogic.semantics.domain
 
 /-
@@ -116,5 +113,4 @@ operators, such as ∧ (mapping to &&).
 
 ```lean
 end DMT1.Lectures.propLogic.semantics.domain
->>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 ```

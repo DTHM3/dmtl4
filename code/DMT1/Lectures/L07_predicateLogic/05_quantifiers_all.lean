@@ -92,6 +92,17 @@ def fimpf : ∀ (f : False), False := fun f => f
 #check (fimpf)  -- a value/proof of type False → False
 
 /- @@@
+### Discussion
+@@@ -/
+
+#check Nat → False
+example : Nat → False := fun n => _ -- stuck
+
+example : ¬(Nat → False) :=
+  fun (h : Nat → False) =>
+    h 0
+
+/- @@@
 First, a reminder that non-dependently typed ∀ propositions
 are equivalent to function types in constructive logic, and
 are proved by showing that the type is not empty: that is, by
