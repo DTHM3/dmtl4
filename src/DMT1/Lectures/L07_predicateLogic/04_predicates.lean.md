@@ -3,112 +3,109 @@
 <!-- toc -->
 
 In this chapter and from now on we'll be working with Lean's
-standard embedding of predicate logic, which is what we just
-covered in the last chapter, where propositions are encoded as
-types of the Prop (rather than Type) sort. But let's start with
-the question, what is a predicate?
+standard embedding of predicate logic, with propositions encoded
+as types of the Prop (rather than Type) sort. But let's start with
+the even more basic question, *what is a predicate?*
 
-## Parameterized (Generalized) Propositions
+A predicate in a predicate logic is a proposition parameterized
+in a way that lets it speak about different objects: those that
+can be filled in for these placeholders.
 
-A predicate in any predicate logic is simply a parameterized
-proposition. If *KisFromCville* and *CisFromCVille* are both
-propositions, now represented by types of these names in Prop,
-and if they both have the same general meaning for for different
-particular people, then we can factor that variation by person
-by making that person a parameter to a function that then returns
-the final proposition with that particular person's name plugged
-in.
+If *KisFromCville* and *CisFromCVille* are both propositions, for
+example, represented in Lean by types of these names in Prop, with
+analogous proof terms, then we can factor out *person* as subject
+to variation, as a parameter. The proposition, in Prop, becomes a
+function, of type Person → Prop, that when applied to a particular
+person yields the original proposition *about* that person.
 
-As we see here, *generalizing* over all *people* let's us say
-in just one place what forms of evidence we're willing to take
-for *any* person in just one place. Note that here and from now
-on will will represent logical, or reasoning, types in Prop.
+## Example: Being From Charlottesville
 
-First, though, the mapping of related propositions to entirely
-separate types:
+Our example postulates a few different people, two of whom are
+from Charlottesville (CVille) and one of whom is not.
+
+### Propositions as Types
+
+Here are types in Prop representing two propositions, each
+coming with the same two constant proof/constructor terms.
+Informally, someone is proved to be from CVille if they have
+a birth certificate or drivers license that says so.
 
 ```lean
--- Specialized Proposition: Carter is from Charlottesville
 inductive KevinIsFromCville : Prop where
-| cvilleBirthCert
-| cvilleDriversLicense
-| cvilleUtilityBill
+| birthCert
+| driversLicense
 
--- Specialized Proposition: Carter is from Charlottesville
 inductive CarterIsFromCville : Prop where
-| cvilleBirthCert
-| cvilleDriversLicense
-| cvilleUtilityBill
+| birthCert
+| driversLicense
 ```
 
-And now we can write our *generalized* predicate. We will
-call it IsFromCharlottesville. It will be parameterized by
-(generalized over) the possible values of a *Person* type,.
-Here this will be the following ordinary data type. In this
-example, it has just three values: Carter, Kevin, and Tammy.
+### Domain of Application
+
+To reduce repetition, we can abstract the variation in
+these two results to a variable-valued formal parameter,
+here of a type we will now call Person. Our Person type
+defines just three *people* (Carter, Kevin, and Tammy).
 
 ```lean
 inductive Person : Type where | Carter | Kevin | Tammy
 open Person
 ```
 
-Now we're set to define PIsFromCville as a predicaate
-on Person values represented as an inductive type that
-is paramterized by a Person, and that when applied (or
-specialized) to a particular Peron yields a proposition
-about that Person.
+### Generalization
 
-On the first line, below, we specify the  name of the
-predicate then a colon then its parameter, and finally
-that the type that results from the application of the
-predicate to a particular person is a type in Prop: it
-represents the *proposition* that that person satisfies
-whatever else the predicate might require.
+Now we define *IsFromCville* as a predicate on people (on
+terms of type Person), represented as an *inductive family*
+of propositions, one for each person, with the specified
+ways to prove such propositions. The proof constructors are
+the introduction rules for constructing proofs of any given
+proposition of this kind. Given any Person, *p*, *birthCert
+p* will typecheck as proof that *p isFromCville*, and so will
+*driversLicense p*.
 
 
 ```lean
 -- Generalization: proposition that <p> is from CVille
-inductive PIsFromCville : Person → Prop where
-| cvilleBirthCert       (p : Person) : PIsFromCville p
-| cvilleDriversLicense  (p : Person) : PIsFromCville p
-| cvilleUtilityBill     (p : Person) : PIsFromCville p
-open PIsFromCville
-
--- Now we can *apply* this generalization to a particular person
-#check PIsFromCville Kevin   -- specialization to particular proposition
-#check PIsFromCville Carter  -- pronounce as "Carter is from Cville"
--- A predicate gives rise to a family of propositions (how many here?)
+inductive IsFromCville : Person → Prop where
+| birthCert       (p : Person) : IsFromCville p
+| driversLicense  (p : Person) : IsFromCville p
+open IsFromCville
 ```
 
-As we'e emphasized before, a predicate is a function
-from arguments to propositions, where propositions are,
-again, represented as *types* in *Prop*.
+### Specialization
+
+Whereas abstraction replaces concerete elements with placeholders,
+specialization fills them in with particulars. Given a predicate,
+we *apply* it to an actual parameter to fill in missing information
+for that argument. We apply a *universal*, over all people, to any
+particular person, to *specialize* the predicate to that argument.
+
 ```lean
-#check PIsFromCville
+#check IsFromCville Kevin   -- specialization to particular proposition
+#check IsFromCville Carter  -- pronounce as "Carter is from Cville"
+#check IsFromCville
 ```
 
-## Proving Propositions Specialized from Predicates
+### Proofs
 
-Finally we can now see how to "prove" propositions derived from
-predicates represented as "inductive type builders." You give
-IsFromCville a Person, it gives you not only a proposition about
-that person, but the rules for constructing proofs of *any* such
-proposition. The following code declares KIFC and CIFC as proofs
-of our two propositions, using the same proof/value constructors
-in both cases, as they're common to *all* specializations of the
-given predicate.
+We can now see how to "prove" propositions obtained by applying
+predicates to arguments. You apply IsFromCville a Person, it gives
+you back a proposition. In addition, as an inductive type, it gives
+a set of constructors for proving such propositions. The following
+code defines pfKevin and pfCarter as proofs of our propositions.
 ```lean
-def pfKevin : PIsFromCville Kevin := cvilleBirthCert Kevin
-def pfCarter : PIsFromCville Carter := cvilleUtilityBill Carter
+def pfKevin : IsFromCville Kevin := birthCert Kevin
+def pfCarter : IsFromCville Carter := driversLicense Carter
 ```
 
+### Summary
 So there! We've now represented a *predicate* in Lean, not
 as a type, per se, but as a function that takes a Person as
 an argument, yields a proposition/type, and provies general
 constructors "introduction rules" for contructing proofs of
 these propositions.
 
-## The Property of The Evenness of Natural Numbers
+## The Property of a Natural Number of Being Even
 
 As another example, we define a very different flavor of
 predicate, one that applies not to people but the numbers,
@@ -129,11 +126,12 @@ is even. Note that we have Ev taking numbers to propositions
 inductive Ev : Nat → Prop where
 | evZero : Ev 0
 | evPlus2 : (n : Nat) → Ev n → Ev (n + 2)
-
 open Ev
 ```
 
-And here are some proofs of evenness
+### Constructing Proofs of Evenness (Introduction)
+
+And here (next) are some proofs of evenness:
 - 0 is even
 - 2 is even
 - 4 is even
@@ -156,6 +154,27 @@ def pfSixEv : Ev 6 :=
       )
     )
 ```
+
+### Using Proofs of Evenness
+
+We should expect to be able to use proofs of evenness
+in reasoning. For example, if we have a proof that 6
+is even, then we should be able to obtain from it a
+proof that, say, 4 is even, we we have just seen that
+sitting inside a proof term showing that 6 is even is
+a proof term showing that 4 is even. The trick will be
+to pattern match on the proof that 6 is even to get at
+the proofs nested inside it.
+
+```lean
+example : Ev 6 → Ev 4
+| (Ev.evPlus2 4 h4) => h4
+```
+
+EXERCISE: Show that if 6 is even so is 2 using this method.
+Hint: Pattern match deeper into the proof of Ev 6.
+
+### Proofs of Negations of Evenness
 
 Why can't we build a proof that 5 is even?
 Well, to do that, we'd need a proof that 3
@@ -180,50 +199,8 @@ an uninhabited type to any other type is trivial.
 Here, it's:
 ```lean
 fun (h : Ev 1) => nomatch h
-```
 
-Any proopsition quantified universally over an
-empty set or type is valid, because it's true for
-all values in that set or type, and because there
-are none, in particular.
-
-Another way to see that this makes sense is to view
-universal quanitification as logical conjunction of
-the family of propositions generated by the predicate
-on the right specialized to a proposition about each
-partixular value in the set or type.
-
-The generalized conjunction of such a paramterized
-family of propositions could be thought of as being
-computed by recursion. With more than zero terms, you
-take the conjunction of the first time with the result
-of aplying this procedure to the rest. To preserve the
-result when finally combining it with the answer in the
-case where there are zero conjuncts to conjoin, the result
-for the empty case has to be *true*. Yet another way to
-see it: *true* is both a left and right identity element
-for logical (truth-functional) *And*. You should check
-your undertsanding by finishing this proof that True *is*
-both a left and a right identity element for *And*.
-
-```lean
-theorem leftRightIdentityAndTrue :
-```
-Note quantification over all propositions. So now we're
-seeing that it makes eminent sense to express ideas at a
-level of generality not expressible in first-order theory.
-But here we have captured exactly the abstraction that we
-want. You can finish the proof here that True really is an
-identity, both left and right, for any proposition.
-```lean
-∀ (P : Prop),
-  ((P ∧ True) ↔ P) ∧
-  ((True ∧ P) ↔ P)
-:=
-fun (p : Prop) =>
-  And.intro
-    (Iff.intro
-      (fun h => h.left)
-      (fun h => ⟨ h, True.intro⟩))
-    (sorry)
+example : ¬Ev 1 := fun (h : Ev 1) => nomatch h
+example : ¬Ev 3 := fun (h : Ev 3) => nomatch h
+example : ¬Ev 5 := fun (h : Ev 5) => nomatch h
 ```
