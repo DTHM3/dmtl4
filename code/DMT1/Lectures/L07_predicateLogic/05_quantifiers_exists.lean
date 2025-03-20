@@ -260,7 +260,9 @@ example :
 
 end testing318
 
-
+/-
+∀ p, ∃ b, Loves p b → ∃ b, ∀ q, Loves q b
+-/
 
 namespace cs2120f23
 variable
