@@ -1,14 +1,16 @@
 [book]
+title = "Reasoning and Computation"
 authors = ["Kevin Sullivan"]
 language = "en"
 multilingual = false
+description = "Discrete Mathematics and Theory for CS Students in Lean 4"
 src = "src"
-title = "Discrete Mathematics and Theory: Working in Lean4"
 
 [tags]
 "1.0.0" = { "releaseNotes" = "Empty Book", "releaseDate" = "Foo" }
 "1.1.0" = { releaseNotes = "Chapters on Propositional Logic and Model Theory", release_date = "2025-01-15" }
 "1.1.1" = { releaseNotes = "Fixes import paths in hw3", release_date = "2025-01-23" }
+"0.2.0" = { releaseNotes = "Pretty good up to quantifiers. Note discontinuity in version # scheme.", release_date = "2025-02-04" }
 
 [build]
 build-dir = "book"
@@ -19,10 +21,10 @@ additional-js = [
     "assets/mermaid.min.js",
     "assets/mermaid-init.js",
 ]
-
-# additional-css = ["assets/mermaid.css"]
+# additional-css = ["css/custom.css"]
 
 mathjax-support = true
+
 git-repository-url = "https://github.com/kevinsullivan/dmtl4"
 
 [output.html.playground.boring-prefixes]

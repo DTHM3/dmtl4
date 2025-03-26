@@ -1,6 +1,6 @@
 ```lean
 /-!
-# Semantic Domain: Boolean Algebra
+# Boolean Algebra
 
 <!-- toc -->
 
@@ -12,23 +12,19 @@ operations that use objects of these kinds to derive
 other objects/values. For example, addition uses two
 Nat values to construct a third, the result.
 
-Almost all the parts of Boolean algebra that we need
-for our semantic domain are already defined in Lean.
-These include:
-- the Bool type, with constructors/values *true* and *false*
-- case analysis to "destructure" a Bool so as to see
-  - what constructur was used to produce it
-  - what arguments were provided to that constructor.
-The following examples take a Bool (argument to match)
-and then do a case analysis, returning one result if the
-constructor of the value was true, and andother if it was
-false.
+Boolean algbra includes
+- a type of Boolean values: true, false
+- unary and binary Bool-consuming operators
+
+Lean already provides most of the elements  of Boolean
+algebra that we need to serve as a semantic domain for our
+definition of propositional logic: the Bool type and the
+most commonly used Booolean operators as functions.
+
+The two elements we'll need that Lean doesn't define
+natively are definitions of *implies* and *equivalentTo*.
 -/
-<<<<<<< HEAD
-namespace DMT1.lecture.propLogic.semantics.domain
-=======
 namespace DMT1.Lectures.propLogic.semantics.domain
->>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 
 #eval match false with | true => "T" | false => "F"
 #eval match true  with | true => "T" | false => "F"
@@ -74,14 +70,15 @@ it doesn't define all the ones we need, including the
 likes of implies and iff. In other words, Lean doesn't
 give us a complete enough specification of the semantic
 domain of Boolean algebra. So in this file, we'll just
-define the rest of what we need.
+define the rest of what we need. For now, that means
+binary Boolean functions for *implies* and *iff*.
 
-#### We need to define a few missing Boolean function
-For now, that means binary Boolean functions for implies
-and iff. These examples show how easy it it to specify
-functions like these in Lean. Each is defined "by cases",
-with one case for each possible combination of argument
-values. In other words, we're specifying truth tables.
+
+For now, all we need to do is to have definitions of
+functions that implement the truth tables of the Boolean
+→ and ↔ operators. Each function, taking two Boolean
+arguments, is defined "by cases", of which there are
+four. In other words, we're specifying truth tables.
 -/
 
 -- Implication
@@ -90,14 +87,19 @@ def imp : Bool → Bool → Bool
 | true, false => false
 | false, true => true
 | false, false => true
+```
 
+
+First: *(P → Q) → (Q → P) → (P ↔ Q)*.
+Then, *(P ↔ Q) → P → Q*
+and *(P ↔ Q) → Q → P*
+
+```lean
 -- Equivalence (bi-conditional, if and only if)
 def iff : Bool → Bool → Bool
 | true, true => true
 | false, false => true
 | _, _ => false
-
--- Define your own here.
 
 -- Problem #1 (combinatorics): How many binary Boolean functions are there?
 -- Problem #2 (Boolean algenra): Write a specification of the exclusive or function (xor)
