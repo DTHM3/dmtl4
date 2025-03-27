@@ -2,14 +2,13 @@ import Lake
 open Lake DSL
 
 package «DMT1» where
-  -- Add package configuration options here
+  -- Package-level configuration (e.g., more Lean flags) can go here
 
 lean_lib «DMT1» where
-  -- Add library configuration options here
+  -- Library-specific build options (if needed)
 
--- Add Mathlib dependency with a known working version
 require mathlib from git
-  "https://github.com/leanprover-community/mathlib4" @ "v4.6.0"
+  "https://github.com/leanprover-community/mathlib4" @ "master"
 
 @[default_target]
 lean_exe «dmt1» where

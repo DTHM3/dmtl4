@@ -136,6 +136,9 @@ variable
 example : ∃ (d : Dog), Blue d := Exists.intro Iris iris_is_blue
 
 -- A proof that there exists a blue dog
+
+example : ∃ (d : Dog), Blue d := Exists.intro Iris iris_is_blue
+
 example : ∃ (d : Dog), Blue d := ⟨ Iris, iris_is_blue ⟩
 
 end bluedog
@@ -219,12 +222,6 @@ def ex1' :
   (∃ (f : Nat), isEven f)
 | ⟨ w, pf_w ⟩  => Exists.intro w pf_w.right
 
-
--- Using better notation
-theorem ex1'' :
-  (∃ (n : Nat), True ∧ isEven n) →
-  (∃ (f : Nat), isEven f)
-| ⟨ w, pf_w ⟩  => Exists.intro w pf_w.right
 
 /- @@@
 ### If There's Someone Everyone Loves then Everyone Loves Someone
