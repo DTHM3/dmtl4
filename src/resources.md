@@ -30,6 +30,7 @@ and ask questions, often getting answers very quickly.
 - [Type Checking in Lean](https://ammkrn.github.io/type_checking_in_lean4/)
 >>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 - [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
+- [Useful Tactics for Beginners](https://github.com/madvorak/lean4-tactics)
 
 ## Books on Closely Related Concepts and Tools (mainly Coq)
 
