@@ -75,6 +75,7 @@
   - [Torsors over Groups](./DMT1/Lectures/L09_classes/C03_torsors.lean.md)
   - [Modules and Vector Spaces](./DMT1/Lectures/L09_classes/C04_vectorSpaces.lean.md)
   - [Affine Spaces](./DMT1/Lectures/L09_classes/C05_affineSpaces.lean.md)
+  - [n-Dimensional Spaces](./DMT1/Lectures/L09_classes/C06_finiteDimensional.lean.md)
 
 >>>>>>> fb83919c4dbac8f107d80ee8a786256d70452bac
 - [Assignments](){-}
