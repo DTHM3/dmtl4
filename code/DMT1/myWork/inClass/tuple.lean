@@ -1,3 +1,4 @@
+
 import Init.Data.Repr
 import Mathlib.Data.Rat.Defs
 import Mathlib.Algebra.Group.Defs
@@ -9,7 +10,7 @@ import DMT1.Lectures.L10_algebra.scalar.scalar
 
 open DMT1.Algebra.Scalar
 
-namespace DMT1.Algebra.Tuple
+namespace DMT1.Algebra.myWork.Tuplew
 
 universe u
 variable
@@ -234,9 +235,9 @@ instance [AddMonoid α] : AddMonoid (Tuple α n) :=
 instance [AddMonoid α] [Neg α] [Sub α] : SubNegMonoid (Tuple α n) :=
 {
   -- add_assoc := sorry
-  zero_add := zero_add
-  add_zero := add_zero
-  nsmul := nsmulRec
+  -- zero_add := zero_add
+  -- add_zero := add_zero
+  -- nsmul := nsmulRec
   zsmul := zsmulRec
   sub_eq_add_neg :=
     by
@@ -388,4 +389,4 @@ def t1 : Tuple ℚ 3 := ⟨ f1 ⟩
 #eval (3 : ℚ) • (t1 + (1/2 :ℚ) • t1 )   --HSMul (notation)
 
 
-end  DMT1.Algebra.Tuple
+end  DMT1.Algebra.myWork.Tuple

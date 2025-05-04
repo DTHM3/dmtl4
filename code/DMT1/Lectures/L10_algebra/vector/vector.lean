@@ -4,7 +4,7 @@ import Mathlib.Algebra.Group.Defs
 import Mathlib.Algebra.Module.Basic
 import Mathlib.LinearAlgebra.AffineSpace.Defs
 import Mathlib.Algebra.Module.Pi
-import DMT1.Lectures.L10_algebra.Tuple.tuple
+import DMT1.Lectures.L10_algebra.tuple.tuple
 
 open DMT1.Algebra.Tuple
 
