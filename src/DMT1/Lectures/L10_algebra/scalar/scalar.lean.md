@@ -1,3 +1,4 @@
+```lean
 import Mathlib.Data.Rat.Defs
 import Mathlib.Algebra.Module.Basic
 
@@ -7,19 +8,17 @@ variable
   {α : Type u}
 
 namespace DMT1.Algebra.Scalar
+```
 
-/- @@@
 # Scalars
-@@@ -/
 
-/- @@@
 ### SMul α α
 
 For this entire system we'll assume scalar
 multiplication of a scalar by another scalar
 is just ordinary multiplication.
-@@@ -/
 
+```lean
 #synth (SMul ℚ ℚ)
 #synth (SMul ℚ (Fin _ → ℚ))
 
@@ -33,3 +32,4 @@ theorem Vc.smul_α_toRep [Mul α] (a b : α) :
 
 
 end DMT1.Algebra.Scalar
+```

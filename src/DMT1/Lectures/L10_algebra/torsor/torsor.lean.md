@@ -1,3 +1,4 @@
+```lean
 import Mathlib.Data.Rat.Defs
 import Mathlib.LinearAlgebra.AffineSpace.Defs
 import DMT1.Lectures.L10_algebra.point.point
@@ -27,3 +28,4 @@ instance [AddGroup α] [Nonempty (Pt α n)] : AddTorsor (Vc α n) (Pt α n) :=
 }
 
 end DMT1.Algebra.Torsor
+```

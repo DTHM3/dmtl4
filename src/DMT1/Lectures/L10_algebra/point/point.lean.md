@@ -1,3 +1,4 @@
+```lean
 import DMT1.Lectures.L10_algebra.vector.vector
 
 namespace DMT1.Algebra.Point
@@ -9,48 +10,46 @@ universe u
 variable
   {n : Nat}
   {α : Type u}
+```
 
-/- @@@
 # Points: Pt α n
 
 We will now represent n-dimensional α *points* * as
 n-tuples of α values in the same way.
 
 ## Representation
-@@@ -/
 
+```lean
 @[ext]
 structure Pt (α : Type u) (n: Nat) where
   (toRep: Fin n → α)
 deriving Repr     --, DecidableEq --, BEq
+```
 
 
 
-/- @@@
 ## Values: Zero (Vc α n)
 There are no distinguished point values. However
 we do need proof that there's *some point*. For that
 we'll require, somewhat arbitrarily, that there be a
 Zero scalar, and we'll build an arbitrary point with
 all zero internal parameters.
-@@@ -/
 
+```lean
 instance [Zero α] : Nonempty (Pt α n) := ⟨ ⟨ 0 ⟩ ⟩
+```
 
 
 
-/- @@@
 ## Operations
-@@@ -/
 
 
 
-/- @@@
 ### VSub (Vc α n) (Pt α n)
 
 This is the -ᵥ notation providing typeclass.
-@@@ -/
 
+```lean
 instance [Sub α] : VSub (Vc α n) (Pt α n) :=
 { vsub p1 p2 := ⟨ p1.1 - p2.1 ⟩ }
 
@@ -61,12 +60,12 @@ theorem Pt.vsub_def [Sub α] (p1 p2 : Pt α n) :
 
 theorem Pt.vsub_toRep [Sub α] (p1 p2 : Pt α n) (i : Fin n) :
   (p1 -ᵥ p2).toRep i = p1.toRep i - p2.toRep i := rfl
+```
 
 
 
-/- @@@
 ### VAdd (Vc α n) (Pt α n)
-@@@ -/
+```lean
 -- defines +ᵥ
 instance [Add α] : VAdd (Vc α n) (Pt α n) where
   vadd v p := ⟨ v.1 + p.1 ⟩
@@ -75,11 +74,11 @@ instance [Add α] : VAdd (Vc α n) (Pt α n) where
 @[simp]
 theorem Pt.hVAdd_def [Add α] (v : Vc α n) (p : Pt α n) :
   v +ᵥ p = ⟨ v.1 + p.1 ⟩ := rfl
+```
 
-/- @@@
 #### VSub then VAdd
-@@@ -/
 
+```lean
 -- set_option pp.rawOnError true
 
 -- @[simp]
@@ -90,10 +89,10 @@ theorem Pt.vsub_vadd_def
   (p1 -ᵥ p2) +ᵥ p2 = ⟨ (p1 -ᵥ p2).1 + p2.1 ⟩ := rfl
 
 -- ∀ (p₁ p₂ : Pt α n), (p₁ -ᵥ p₂) +ᵥ p₂ = p₁
-/- @@@
+```
 #### AddActon (Vc α n) (Pt α n)
-@@@ -/
 
+```lean
 /-
 /-- An `AddMonoid` is an `AddSemigroup` with an element `0` such that `0 + a = a + 0 = a`. -/
 class AddMonoid (M : Type u) extends AddSemigroup M, AddZeroClass M where
@@ -132,19 +131,19 @@ instance [AddMonoid α]: AddAction (Vc α n) (Pt α n) :=
     ext
     apply add_assoc
 }
+```
 
 
-/- @@@
 ### Add then VAdd
-@@@ -/
 
+```lean
 theorem Pt.add_vadd_def [Add α] (v1 v2 : Vc α n) (p : Pt α n) :
   (v1 + v2) +ᵥ p = ⟨ (v1 + v2).1 +  p.1 ⟩ := rfl
+```
 
 
-/- @@@
 There now. Behold. Correct is simpler
-@@@ -/
+```lean
 @[simp]
 theorem Pt.vsub_vadd'_def
   [Zero α]
@@ -159,3 +158,4 @@ by  -- and this shows it's ok
   simp only [Pt.vsub_def]
 
 end DMT1.Algebra.Point
+```

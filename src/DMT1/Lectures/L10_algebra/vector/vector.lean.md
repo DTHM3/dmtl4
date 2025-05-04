@@ -1,11 +1,6 @@
+```lean
 import Mathlib.Data.Rat.Defs
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.LinearAlgebra.AffineSpace.Defs
-import Mathlib.Algebra.Module.Pi
 import DMT1.Lectures.L10_algebra.tuple.tuple
-
-open DMT1.Algebra.Tuple
 
 namespace DMT1.Algebra.Vector
 
@@ -15,7 +10,7 @@ variable
   {α : Type u}
 
 ----------------------------------------------------
-/- @@@
+```
 # Vectors: Vc α n
 
 TODO: Update this explanation for loss of Tuple type
@@ -24,22 +19,20 @@ the same way, but now using *Tuple α n* as a concrete
 representation. We lift the operations and structures
 we need from the underlying *Tuple* type, just as did
 for *Tuple* from he underlying scalar *K* type.
-@@@ -/
 
-/- @@@
 ## Representation as Fin n → α
-@@@ -/
 
+```lean
 @[ext]
 structure Vc (α : Type u) (n : Nat) : Type u where
   (toRep : Fin n → α)
 -- deriving Repr
+```
 
 
-/- @@@
 ### Special Values: Zero (Vc α n)
-@@@ -/
 
+```lean
 instance [Zero α]: Zero (Vc α n) where
   zero := ⟨ 0 ⟩
 
@@ -47,18 +40,16 @@ instance [Zero α]: Zero (Vc α n) where
 @[simp]
 theorem Vc.zero_def [Zero α] :
   (0 : Vc α n) = ⟨ ( 0 : Fin n → α) ⟩ := rfl
+```
 
 
-/- @@@
 ## Operations
-@@@ -/
 
 
 
-/- @@@
 ### Add (Vc α n)
-@@@-/
 
+```lean
 instance [Add α] : Add (Vc α n) where
   add t1 t2 := ⟨ t1.1 + t2.1 ⟩
 
@@ -68,14 +59,14 @@ theorem Vc.add_def [Add α] (t1 t2 : Vc α n) :
 
 theorem Vc.add_toRep [Add α] {n : ℕ} (x y : Vc α n) (i : Fin n) :
   (x + y).1 i = x.1 i + y.1 i := rfl
+```
 
 
 
 
-/- @@@
 ### HAdd (Vc α n) (Vc α n) (Vc α n)
-@@@-/
 
+```lean
 -- Support for Vc `+` notation using HAdd
 @[simp]
 instance [Add α]  : HAdd (Vc α n) (Vc α n) (Vc α n) :=
@@ -87,15 +78,15 @@ theorem Vc.hAdd_def [Add α] (v w : Vc α n) :
 
 theorem Vc.hAdd_toRep [Add α] {n : ℕ} (x y : Vc α n) (i : Fin n) :
   (x + y).1 i = x.1 i + y.1 i := rfl
+```
 
 
 
-/- @@@
 ### Neg (Vc α n)
 
 No separate notation class.
-@@@ -/
 
+```lean
 instance [Neg α] : Neg (Vc α n) where
    neg t := ⟨ -t.1 ⟩
 
@@ -105,13 +96,13 @@ theorem Vc.neg_def [Neg α] (t : Vc α n) :
 
 theorem Vc.neg_toRep [Neg α] {n : ℕ} (x : Vc α n) (i : Fin n) :
   -x.1 i = -(x.1 i) := rfl
+```
 
 
 
-/- @@@
 ### Sub (Vc α n)
-@@@ -/
 
+```lean
 instance [Sub α] : Sub (Vc α n) where
   sub t1 t2 := ⟨t1.1 - t2.1⟩
 
@@ -121,15 +112,15 @@ theorem Vc.sub_def [Sub α] (t1 t2 : Vc α n) :
 
 theorem Vc.sub_toRep [Sub α] {n : ℕ} (x y : Vc α n) (i : Fin n) :
   (x - y).1 i = x.1 i - y.1 i := rfl
+```
 
 
 
-/- @@@
 ### HSub (Vc α n) (Vc α n) (Vc α n)
 
 This is the heterogeneous subtraction (-) otation-defining class
-@@@ -/
 
+```lean
 instance [Sub α] : HSub (Vc α n) (Vc α n) (Vc α n) where
   hSub := Sub.sub
 
@@ -139,12 +130,12 @@ theorem Vc.hSub_def [Sub α] (v w : Vc α n) :
 @[simp]
 theorem Vc.hSub_toRep [Sub α] (v w : Vc α n) (i : Fin n) :
   (v - w).1 i = v.1 i - w.1 i := rfl
+```
 
 
-/- @@@
 ### SMul α (Vc α n)
-@@@ -/
 
+```lean
 instance [SMul α α] : SMul α (Vc α n) where
   smul a t := ⟨ a • t.1 ⟩
 
@@ -154,11 +145,11 @@ theorem Vc.smul_Vc_def [SMul α α] (a : α) (v : Vc α n) :
 theorem Vc.smul_Vc_toRep [SMul α α] (a : α) (v : Vc α n) (i : Fin n) :
   (a • v).toRep i = a • (v.toRep i) :=
 rfl
+```
 
 
-/- @@@
 ### HSMul α vc vc
-@@@ -/
+```lean
 instance [SMul α α] : HSMul α (Vc α n) (Vc α n) where
   hSMul := SMul.smul
 
@@ -167,16 +158,14 @@ theorem Vc.hSMul_def [SMul α α] (a : α) (v : Vc α n) :
 
 theorem Vc.hsmul_toRep [SMul α α] (a : α) (v : Vc α n) (i : Fin n) :
   (a • v).toRep i = a • (v.toRep i) := rfl
+```
 
 
-/- @@@
 ### Structures
-@@@ -/
 
-/- @@@
 #### AddCommSemigroup  (Vc α n)
-@@@ -/
 
+```lean
 instance [AddCommSemigroup α]: AddCommSemigroup (Vc α n) :=
 {
   add_comm := by     -- So you can see the steps
@@ -185,15 +174,15 @@ instance [AddCommSemigroup α]: AddCommSemigroup (Vc α n) :=
     apply add_comm
   add_assoc := by intros; ext; apply add_assoc
 }
+```
 
 
-/- @@@
 ### AddSemigroup  (Vc α n)
 
 Had a bug here: included [Add α] as well as [Semigroup α]
 thereby getting two equivalent but different definitions
 of +. Try adding [Add α] to see how the problem manifests.
-@@@ -/
+```lean
 instance [AddSemigroup α] : AddSemigroup (Vc α n) :=
 {
   add := Add.add
@@ -202,11 +191,11 @@ instance [AddSemigroup α] : AddSemigroup (Vc α n) :=
     simp [Vc.add_def]
     apply add_assoc
 }
+```
 
-/- @@@
 #### AddCommMonoid (Vc α n)
-@@@ -/
 
+```lean
 instance [AddCommMonoid α] : AddCommMonoid (Vc α n) :=
 {
   add := Add.add
@@ -217,10 +206,10 @@ instance [AddCommMonoid α] : AddCommMonoid (Vc α n) :=
   add_zero := by intros; ext; apply add_zero
   add_comm := by intros; ext; apply add_comm
 }
+```
 
-/- @@@
 #### Module α (Vc α n)
-@@@ -/
+```lean
 instance [Semiring α] : Module α (Vc α n) :=
 {
   smul_add := by intros a x y; ext i; apply mul_add,
@@ -230,12 +219,12 @@ instance [Semiring α] : Module α (Vc α n) :=
   zero_smul := by intros x; ext i; apply zero_mul,
   smul_zero := by intros a; ext i; apply mul_zero
 }
+```
 
 
-/- @@@
 #### AddMonoid (Vc α n)
-@@@ -/
 
+```lean
 instance [AddMonoid α] : AddMonoid (Vc α n) :=
 {
   nsmul := nsmulRec
@@ -250,10 +239,10 @@ instance [AddMonoid α] : AddMonoid (Vc α n) :=
     ext
     apply add_zero
 }
+```
 
-/- @@@
 #### SubNegMonoid
-@@@ -/
+```lean
 instance [SubNegMonoid α] : SubNegMonoid (Vc α n) :=
 {
   zsmul := zsmulRec
@@ -274,3 +263,4 @@ instance [AddGroup α] : AddGroup (Vc α n) :=
 -- We can have Torsor Vc Pt
 -- And that is affine space for any Vc sastisfying and Pt satisfying
  end DMT1.Algebra.Vector
+```
