@@ -5,7 +5,7 @@ import Mathlib.LinearAlgebra.AffineSpace.Defs
 import Mathlib.Algebra.Module.Pi
 import DMT1.Lectures.L10_algebra.tuple.tuple
 
-open DMT1.Algebra.Tuple
+open DMT1.Algebra.Tuples
 
 namespace DMT1.Algebra.Vector
 
