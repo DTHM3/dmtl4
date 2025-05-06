@@ -1,15 +1,19 @@
 import Mathlib.Data.Matrix.Defs
-
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Data.Matrix.Diagonal
 import Mathlib.Data.Matrix.Basic
 import DMT1.Lectures.L10_algebra.vector.vector
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic.FinCases
-import Mathlib.Data.Matrix.Basic
 import Mathlib.Tactic.Ring
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Fintype.Basic
 import Mathlib.Data.Fin.Tuple.Basic
+import Mathlib.Data.Vector.Defs
+import Mathlib.Data.Vector.Basic
+import Mathlib.Data.Fintype.Basic
+
 /- @@@
 
 # Matrix M N α
@@ -200,8 +204,14 @@ that specify the intended map and its inverse.
 structure LinEqSelf (α : Type u) [Field α] (n : ℕ) [DecidableEq (Fin n)] [Fintype (Fin n)] where
   mat : Matrix (Fin n) (Fin n) α
   mat_inv : Matrix (Fin n) (Fin n) α
-  left_inv : mat * mat_inv = 1
-  right_inv : mat_inv * mat = 1
+  left_inv : mat * mat_inv = 1 := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> -- Consider all cases for i and j (0,0; 0,1; 1,0; 1,1)
+    simp [Matrix.mul_apply, one_apply, Fin.sum_univ_succ]
+  right_inv : mat_inv * mat = 1 := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> -- Consider all cases for i and j (0,0; 0,1; 1,0; 1,1)
+    simp [Matrix.mul_apply, one_apply, Fin.sum_univ_succ]
 
 /- @@@
 ### B. Give Some Examples
@@ -231,31 +241,9 @@ def LinEqSelf.apply_inv {α : Type _} [Field α] {n : ℕ} [DecidableEq (Fin n)]
 def example1D_inst : LinEqSelf ℚ 1 where
   mat := ![![2]]
   mat_inv := ![![1/2]]
-  left_inv := by
-    unfold Matrix.one
-    ext i j
-    simp [Matrix.mul_apply, one_apply]
-    split_ifs with h
-    · rfl
-    · exfalso
-      apply h
-      fin_cases i
-      fin_cases j
-      simp
-  right_inv := by
-    unfold Matrix.one
-    ext i j
-    simp [Matrix.mul_apply, one_apply]
-    split_ifs with h
-    · rfl
-    · exfalso
-      apply h
-      fin_cases i
-      fin_cases j
-      simp
 
-#eval (LinEqSelf.apply example1D_inst ⟨![3]⟩).toRep 0 -- Should be 6
-#eval (LinEqSelf.apply_inv example1D_inst ⟨![3]⟩).toRep 0 -- should be 3/2
+#eval (LinEqSelf.apply example1D_inst ⟨![3]⟩).toRep -- Should be 6
+#eval (LinEqSelf.apply_inv example1D_inst ⟨![3]⟩).toRep -- should be 3/2
 
 ---------------------------------------------------------
 -- EXAMPLE 2D
@@ -264,18 +252,17 @@ instance : DecidableEq (Fin 2) := inferInstance
 instance : Fintype (Fin 2) := inferInstance
 
 def example2D_inst : LinEqSelf ℚ 2 where
-  mat := ![![2, 0], ![0, 3]]       -- Scaling matrix (2 and 3 on diagonal)
-  mat_inv := ![![1/2, 0], ![0, 1/3]] -- Inverse scaling matrix (1/2 and 1/3)
-  left_inv := by
-    calc ![![2, 0], ![0, 3]] * ![![1/2, 0], ![0, 1/3]] = Matrix.one (Fin 2) (Fin 2) ℚ
-
-  right_inv := by
-    calc ![![1/2, 0], ![0, 1/3]] * ![![2, 0], ![0, 3]] = Matrix.one (Fin 2) (Fin 2) ℚ
+  mat := ![![2, 0], ![0, 3]]
+  mat_inv := ![![1/2, 0], ![0, 1/3]]
 
 -- Example use:
 
-#eval! (LinEqSelf.apply example2D_inst ⟨![3, 4]⟩).toRep -- should be 6, 12
-#eval! (LinEqSelf.apply_inv example2D_inst ⟨![6, 12]⟩).toRep -- should be 3, 4
+def example2D_vector : Vc ℚ 2 := ⟨![3, 4]⟩
+#eval example2D_vector.toRep -- should be 3, 4
+def example2D_vector_apply : Vc ℚ 2 := LinEqSelf.apply example2D_inst example2D_vector
+#eval example2D_vector_apply.toRep -- should be 6, 12
+def example2D_vector_apply_inv : Vc ℚ 2 := LinEqSelf.apply_inv example2D_inst example2D_vector_apply
+#eval example2D_vector_apply_inv.toRep -- should be 3, 4
 
 
 ---------------------------------------------------------
@@ -287,13 +274,14 @@ instance : Fintype (Fin 3) := inferInstance
 def example3D_inst : LinEqSelf ℚ 3 where
   mat := ![![2, 0, 0], ![0, 3, 0], ![0, 0, 4]]
   mat_inv := ![![1/2, 0, 0], ![0, 1/3, 0], ![0, 0, 1/4]]
-  left_inv := sorry
-  right_inv := sorry
 
 -- Test example
-#eval! (LinEqSelf.apply example3D_inst ⟨![1, 2, 3]⟩).toRep -- Should be 2, 6, 12
-
-#eval! (LinEqSelf.apply_inv example3D_inst ⟨![2, 6, 12]⟩).toRep -- Should be 1, 2 ,3
+def example3D_vector : Vc ℚ 3 := ⟨![1, 2, 3]⟩
+#eval example3D_vector.toRep -- should be 1, 2, 3
+def example3D_vector_apply : Vc ℚ 3 := LinEqSelf.apply example3D_inst example3D_vector
+#eval example3D_vector_apply.toRep -- should be 2, 6, 12
+def example3D_vector_apply_inv : Vc ℚ 3 := LinEqSelf.apply_inv example3D_inst example3D_vector_apply
+#eval example3D_vector_apply_inv.toRep -- should be 1, 2, 3
 
 
 
