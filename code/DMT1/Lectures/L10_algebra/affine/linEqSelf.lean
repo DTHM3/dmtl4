@@ -242,6 +242,14 @@ def example1D_inst : LinEqSelf ℚ 1 where
   mat := ![![2]]
   mat_inv := ![![1/2]]
 
+def example1D_inst_neg : LinEqSelf ℚ 1 where
+  mat := ![![5]]
+  mat_inv := ![![1/5]]
+
+#eval (LinEqSelf.apply example1D_inst_neg ⟨![7]⟩).toRep -- Should be -35
+#eval (LinEqSelf.apply_inv example1D_inst_neg ⟨![-35]⟩).toRep -- Should be 7
+
+
 #eval (LinEqSelf.apply example1D_inst ⟨![3]⟩).toRep -- Should be 6
 #eval (LinEqSelf.apply_inv example1D_inst ⟨![3]⟩).toRep -- should be 3/2
 
@@ -254,6 +262,15 @@ instance : Fintype (Fin 2) := inferInstance
 def example2D_inst : LinEqSelf ℚ 2 where
   mat := ![![2, 0], ![0, 3]]
   mat_inv := ![![1/2, 0], ![0, 1/3]]
+
+def example2D_inst_shear : LinEqSelf ℚ 2 where
+  mat := ![![1, 2], ![0, 1]] -- Shear matrix
+  mat_inv := ![![1, -2], ![0, 1]] -- Inverse of shear
+
+def example2D_vector_shear : Vc ℚ 2 := ⟨![3, 4]⟩
+#eval LinEqSelf.apply example2D_inst_shear example2D_vector_shear |>.toRep -- Should be 3 + 8 = 11, 4
+#eval LinEqSelf.apply_inv example2D_inst_shear ⟨![11, 4]⟩ |>.toRep -- Should be 3, 4
+
 
 -- Example use:
 
@@ -274,6 +291,15 @@ instance : Fintype (Fin 3) := inferInstance
 def example3D_inst : LinEqSelf ℚ 3 where
   mat := ![![2, 0, 0], ![0, 3, 0], ![0, 0, 4]]
   mat_inv := ![![1/2, 0, 0], ![0, 1/3, 0], ![0, 0, 1/4]]
+
+def example3D_inst_rotation : LinEqSelf ℚ 3 where
+  mat := ![![0, -1, 0], ![1, 0, 0], ![0, 0, 1]]
+  mat_inv := ![![0, 1, 0], ![-1, 0, 0], ![0, 0, 1]]
+
+def example3D_vector_rotation : Vc ℚ 3 := ⟨![1, 0, 5]⟩
+#eval LinEqSelf.apply example3D_inst_rotation example3D_vector_rotation |>.toRep -- Should be 0, 1, 5
+#eval LinEqSelf.apply_inv example3D_inst_rotation ⟨![0, 1, 5]⟩ |>.toRep -- Should be 1, 0, 5
+
 
 -- Test example
 def example3D_vector : Vc ℚ 3 := ⟨![1, 2, 3]⟩
