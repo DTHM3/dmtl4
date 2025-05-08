@@ -1,7 +1,7 @@
 import Mathlib.LinearAlgebra.AffineSpace.Defs
 import Mathlib.LinearAlgebra.AffineSpace.AffineEquiv
 import DMT1.Lectures.L10_algebra.torsor.torsor
-
+import DMT1.Lectures.L10_algebra.affine.linEqSelf
 
 import Mathlib.Data.Real.Basic
 import Mathlib.LinearAlgebra.AffineSpace.AffineEquiv
